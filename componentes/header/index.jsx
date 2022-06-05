@@ -1,7 +1,9 @@
 import Link from "next/link";
 import style from "./Header.module.css";
+import { useState } from "react";
 
 const Header = () => {
+	const [menu, setMenu] = useState(false);
 	return (
 		<header className={style.header}>
 			<nav className={style.navbar}>
@@ -19,11 +21,22 @@ const Header = () => {
 							<a>About</a>
 						</Link>
 					</div>
-					<div className={style.menu}>Menu</div>
+					<div className={style.menuBtn} onClick={setMenu}>Menu</div>
+					{menu ? (
+						<div className={style.menuList}>
+							<h2 onClick={() => setMenu(!menu)}>X</h2>
+							<Link href="/">
+								<a>Home</a>
+							</Link>
+							<Link href="/about">
+								<a>About</a>
+							</Link>
+						</div>
+					) : null}
 				</div>
 			</nav>
 		</header>
 	);
 };
-
+	
 export default Header;
