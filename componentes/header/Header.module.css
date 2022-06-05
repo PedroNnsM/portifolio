@@ -18,9 +18,10 @@
     width: 100%;
     z-index: 999;
     padding: 20px 0px;
-    background-color: #c6c6c6;
-    border-bottom: 1px solid #ccc;
-    box-shadow: #000 0px 0px 5px;
+    background-color: rgb(180, 48, 48);
+
+    border-bottom: 1px solid #0000;
+    box-shadow: #000 0px 0px 35px;
 }
 
 .navbar .maxWidth {
