@@ -1,0 +1,40 @@
+/* css do header */
+
+.maxWidth{
+    max-width: 1300px;
+    padding: 0px 10px;
+    margin: auto;
+}
+
+.navbar .logo a{
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0px;
+    background-color: #c6c6c6;
+    border-bottom: 1px solid #ccc;
+    box-shadow: #000 0px 0px 5px;
+}
+
+.navbar .maxWidth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar .menu a {
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 35px;
+}
+  
