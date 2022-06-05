@@ -14,5 +14,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-plugin-react": "^7.30.0"
   }
 }
