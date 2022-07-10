@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    color:#0D0D0D;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 1000px;
+    background: #0D6BA6;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    border-bottom: 1px solid #0D0D0D;
+}
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+    border-bottom: 1px solid #0D0D0D;
+    color: #0D0D0D;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #0D0D0D;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+
+header.sticky .logo,
+header.sticky ul li a 
+{
+    color: #4978ff;
+
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #0D6BA6;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.banner h2 {
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.banner h2 span {
+    font-weight: 700;
+    color: #4978ff;
+}
+
+.sec {
+    background: #fff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.sec .content {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.mxw800p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+h3 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+p {
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.services {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+img {
+    width:150px;
+}
