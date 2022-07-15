@@ -26,6 +26,7 @@ header{
     padding: 40px 100px;
     z-index: 1000;
     border-bottom: 1px solid #0D0D0D;
+    transition: all 0.5s ease-in-out;
 }
 header.sticky {
     padding: 5px 100px;
@@ -147,6 +148,91 @@ p {
     margin-top: 40px;
 }
 
-img {
-    width:150px;
+.services .box {
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.services .box .iconBx {
+    margin-top: 20px;
+}
+
+.services .box .iconBx img {
+    max-width: 70px;
+    margin-bottom: 15px;
+}
+
+.services .box h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.stats {
+    background: #000;
+    padding-top: 250px;
+    margin-top: -250px;
+}
+.stats h3,
+.stats p {
+    color: #fff;
+}
+.statsBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.statsBox h2 {
+   color: #fff;
+    font-size: 1.5em;    
+}
+.statsBox h4 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.workBx {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.workBx .brand {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    min-height: 300px;
+    background: #4978ff;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+}
+.workBx .brand:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
+    background: #555;
+}
+
+.workBx .brand a {
+    text-decoration: none;
+    color: rbga(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+.workBx .brand:hover a h2 {
+    color: rgba(255, 255, 255, 1);
 }
