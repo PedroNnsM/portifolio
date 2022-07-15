@@ -1,4 +1,5 @@
-import { FaCode } from 'react-icons/fa';
+import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs';
+import { FaCodepen } from 'react-icons/fa';
 import img from './public/img.png';
 
 export function App() {
@@ -183,19 +184,44 @@ export function App() {
         </div>
       </section>
 
-      <section className="sec" id="contat">
+      <section className="sec" id="contato">
         <div className="content">
           <div className="mxw800p">
-            <h3>Sobre mim</h3>
+            <h3>Entre em contato </h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reiciendis corporis quis culpa quaerat dolor ut. Consectetur,
-              dolore ipsam placeat quam aut ullam similique mollitia,
-              aspernatur, non ratione officia corporis aliquid.
+              Reiciendis corporis
             </p>
-            <a href="#" className="btn">
-              Ver mais
-            </a>
+          </div>
+          <div className="contactForm">
+            <form action="#">
+              <div className="row100">
+                <div className="inputBc50">
+                  <input type="text" name='' placeholder="Nome completo" />
+                </div>
+                <div className="inputBc50">
+                  <input type="text" name='' placeholder="Email" />
+                </div>
+              </div>
+              <div className="row100">
+                <div className="inputBc100">
+                  <textarea name='' placeholder="Mensagem" />
+                </div>
+              </div>
+              <div className="row100">
+                <div className="inputBc100">
+                  <input type="submit" name value="send" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div className="sci">
+            <ul>
+            <li><a href='#'><BsLinkedin /></a></li>
+            <li><a href='#'><BsGithub /></a></li>
+            <li><a href='#'><FaCodepen /></a></li>
+            <li><a href='#'><BsInstagram /></a></li>
+            </ul>
           </div>
         </div>
       </section>
