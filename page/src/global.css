@@ -335,4 +335,9 @@ p {
 
 .sci ul li a img {
     filter: invert(1);
+    max-width: 40px;
+}
+
+.sci ul li a:hover img {
+    opacity: 0.5;
 }

@@ -1,6 +1,11 @@
-import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs';
-import { FaCodepen } from 'react-icons/fa';
-import img from './public/img.png';
+import  react  from './public/react.png';
+import  html  from './public/html.png';
+import  css  from './public/css.png';
+import  js  from './public/js.png';
+import  github  from './public/github.png';
+import  linkedin  from './public/linkedin.png';
+import  codepen  from './public/codepen.png';
+
 
 export function App() {
 
@@ -69,7 +74,7 @@ export function App() {
           <div className="services">
             <div className="box">
               <div className="iconBx">
-                <img src={img} />
+                <img src={html} />
               </div>
               <div className="content">
                 <h2>HTML</h2>
@@ -79,7 +84,7 @@ export function App() {
 
             <div className="box">
               <div className="iconBx">
-                <img src={img} />
+                <img src={css} />
               </div>
               <div className="content">
                 <h2>CSS</h2>
@@ -89,7 +94,7 @@ export function App() {
 
             <div className="box">
               <div className="iconBx">
-                <img src={img} />
+                <img src={js} />
               </div>
               <div className="content">
                 <h2>Javascript</h2>
@@ -106,7 +111,7 @@ export function App() {
 
             <div className="box">
               <div className="iconBx">
-                <img src={img} />
+                <img src={react} />
               </div>
               <div className="content">
                 <h2>React.js</h2>
@@ -241,25 +246,22 @@ export function App() {
           <div className="sci">
             <ul>
               <li>
-                <a href="#">
-                  <BsLinkedin />
+                <a href="https://www.linkedin.com/in/pedro-nunes-m/" target="_blank">
+                <img src={linkedin} />
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <BsGithub />
+                <a href="https://github.com/PedroNnsM" target="_blank">
+                <img src={github} />
+                  
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <img src='/public/codepen.png' />
+                <a href="https://codepen.io/pedro-nunes-the-lessful/" target="_blank">
+                  <img src={codepen} />
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <BsInstagram />
-                </a>
-              </li>
+
             </ul>
           </div>
           <p className="copyright">
