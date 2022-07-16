@@ -236,3 +236,103 @@ p {
 .workBx .brand:hover a h2 {
     color: rgba(255, 255, 255, 1);
 }
+
+.contact{
+    background: #000;
+}
+
+.contact h3,
+.contact p {
+    color: #fff;
+}
+.contactForm {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.contactForm form {
+    width: 100%;
+
+}
+
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+}
+
+.contactForm .row100 .inputBx50 {
+    width: 50%;
+    margin: 0 20px;
+}
+
+.contactForm .row100 .inputBx100 {
+    width: 100%;
+    margin: 0 20px;
+} 
+
+.contactForm .row100 input,
+.contactForm .row100 textarea {
+   position: relative;
+   border: none;
+   border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    ouline: none;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+
+.contactForm .row100 textarea {
+    height: 100px;
+
+}
+
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contactForm .row100 input[type="submit"] {
+    background: #fff;
+    color: #000;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.sci {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.sci ul {
+    display: flex;
+
+}
+
+.sci ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.sci ul li a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.sci ul li a img {
+    filter: invert(1);
+}
