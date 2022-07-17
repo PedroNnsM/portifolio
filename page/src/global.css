@@ -437,5 +437,5 @@ p {
     }
     .row100 {
         flex-direction: column;
-    }
+    };
 }
