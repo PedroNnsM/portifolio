@@ -21,15 +21,15 @@ export function App() {
           Pedro.dev
         </a>
         <ul>
-          <li>
+          {/* <li>
             <a href="#home">Home</a>
           </li>
           <li>
             <a href="#sobre">Sobre</a>
           </li>
           <li>
-            <a href="#tecnologias">Tecnologias</a>
-          </li>
+            <a href="#tecnologias">Tecnologias</a> 
+          </li>*/}
           <li>
             <a href="#portifolio">Portifolio</a>
           </li>
@@ -39,6 +39,7 @@ export function App() {
           <li>
             <a href="#social">Redes</a>
           </li>
+          <div className="toggle"></div>
         </ul>
       </header>
 
