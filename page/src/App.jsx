@@ -14,6 +14,11 @@ export function App() {
     header.classList.toggle("sticky", window.scrollY > 0);
     });
   
+   function toggle(){
+    var header = document.querySelector('header');
+    header.classList.toggle("active");
+   } 
+  
   return (
     <>
       <header id="header">
@@ -21,15 +26,15 @@ export function App() {
           Pedro.dev
         </a>
         <ul>
-          {/* <li>
+          <li>
             <a href="#home">Home</a>
           </li>
           <li>
             <a href="#sobre">Sobre</a>
           </li>
           <li>
-            <a href="#tecnologias">Tecnologias</a> 
-          </li>*/}
+            <a href="#tecnologias">Tecnologias</a>
+          </li>
           <li>
             <a href="#portifolio">Portifolio</a>
           </li>
@@ -39,8 +44,8 @@ export function App() {
           <li>
             <a href="#social">Redes</a>
           </li>
-          <div className="toggle"></div>
         </ul>
+        <div className="toggle" onClick={toggle()}></div>
       </header>
 
       <section className="banner" id="home">
@@ -247,22 +252,26 @@ export function App() {
           <div className="sci">
             <ul>
               <li>
-                <a href="https://www.linkedin.com/in/pedro-nunes-m/" target="_blank">
-                <img src={linkedin} />
+                <a
+                  href="https://www.linkedin.com/in/pedro-nunes-m/"
+                  target="_blank"
+                >
+                  <img src={linkedin} />
                 </a>
               </li>
               <li>
                 <a href="https://github.com/PedroNnsM" target="_blank">
-                <img src={github} />
-                  
+                  <img src={github} />
                 </a>
               </li>
               <li>
-                <a href="https://codepen.io/pedro-nunes-the-lessful/" target="_blank">
+                <a
+                  href="https://codepen.io/pedro-nunes-the-lessful/"
+                  target="_blank"
+                >
                   <img src={codepen} />
                 </a>
               </li>
-
             </ul>
           </div>
           <p className="copyright">

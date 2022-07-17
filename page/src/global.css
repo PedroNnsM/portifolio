@@ -378,7 +378,10 @@ p {
         height: 2px;
         background: #000;
         z-index: 1;
-        box-shadow: 0 10px 0 #000;
         transition: 0.5s;
     }
+}
+header {
+    padding: 5px 50px;
+    background: #fff;
 }
