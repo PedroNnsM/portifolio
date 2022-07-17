@@ -380,8 +380,62 @@ p {
         z-index: 1;
         transition: 0.5s;
     }
-}
-header {
-    padding: 5px 50px;
-    background: #fff;
+    header,
+    header.sticky {
+        padding: 5px 50px;
+        background: #fff;
+    }
+    header ul {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    header.active ul {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 20px;
+    }
+    
+    header.active ul li a {
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    header .logo,
+    header ul li a {
+        color: #0f0f0f;
+    }
+
+    .banner {
+        background-position: center;
+    }
+    .banner h2 {
+        font-size: 2em;
+        padding: 0 50px;
+    }
+
+    .sec {
+        padding: 100px 50px 50px 50px;
+    }
+    .services .box {
+        width: 100%;
+    }
+    .stats {
+        padding-top: 50px;
+
+    }
+    .row100 {
+        flex-direction: column;
+    }
 }

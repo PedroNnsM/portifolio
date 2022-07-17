@@ -1,3 +1,4 @@
+
 import  react  from './public/react.png';
 import  html  from './public/html.png';
 import  css  from './public/css.png';
@@ -7,14 +8,16 @@ import  linkedin  from './public/linkedin.png';
 import  codepen  from './public/codepen.png';
 
 
+
 export function App() {
+  
 
   window.addEventListener('scroll', function(){
     var header = document.querySelector('header');
     header.classList.toggle("sticky", window.scrollY > 0);
     });
   
-   function toggle(){
+   function Toggle() {
     var header = document.querySelector('header');
     header.classList.toggle("active");
    } 
@@ -27,25 +30,25 @@ export function App() {
         </a>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={Toggle}>Home</a>
           </li>
           <li>
-            <a href="#sobre">Sobre</a>
+            <a href="#sobre" onClick={Toggle}>Sobre</a>
           </li>
           <li>
-            <a href="#tecnologias">Tecnologias</a>
+            <a href="#tecnologias" onClick={Toggle}>Tecnologias</a>
           </li>
           <li>
-            <a href="#portifolio">Portifolio</a>
+            <a href="#portifolio" onClick={Toggle}>Portifolio</a>
           </li>
           <li>
-            <a href="#contato">Contato</a>
-          </li>
+            <a href="#contato" onClick={Toggle}>Contato</a>
+          </li> 
           <li>
-            <a href="#social">Redes</a>
+            <a href="#social" onClick={Toggle}>Redes</a>
           </li>
         </ul>
-        <div className="toggle" onClick={toggle()}></div>
+        <div className="toggle" onClick={Toggle}></div>
       </header>
 
       <section className="banner" id="home">
