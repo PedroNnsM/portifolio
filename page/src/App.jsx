@@ -21,7 +21,7 @@ export function App() {
     var header = document.querySelector('header');
     header.classList.toggle("active");
    } 
-  
+   
   return (
     <>
       <header id="header">
@@ -44,17 +44,17 @@ export function App() {
           <li>
             <a href="#contato" onClick={Toggle}>Contato</a>
           </li> 
-          <li>
-            <a href="#social" onClick={Toggle}>Redes</a>
-          </li>
         </ul>
         <div className="toggle" onClick={Toggle}></div>
       </header>
 
       <section className="banner" id="home">
         <h2>
-          Desenvolvedor <span>Front-end</span>{" "}
-        </h2>
+          Olá, me chamo</h2> 
+          <h3>Pedro Nunes</h3>{" "} <br />
+        
+        <p>Sou Desenvolvedor <span>Front-end</span>  
+        </p>
       </section>
 
       <section className="sec" id="sobre">
