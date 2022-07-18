@@ -21,7 +21,7 @@ export function App() {
     var header = document.querySelector('header');
     header.classList.toggle("active");
    } 
-   
+
   return (
     <>
       <header id="header">
@@ -53,7 +53,7 @@ export function App() {
           Olá, me chamo</h2> 
           <h3>Pedro Nunes</h3>{" "} <br />
         
-        <p>Sou Desenvolvedor <span>Front-end</span>  
+        <p>Sou Desenvolvedor <span> Front-end</span>  
         </p>
       </section>
 
@@ -62,10 +62,12 @@ export function App() {
           <div className="mxw800p">
             <h3>Sobre mim</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reiciendis corporis quis culpa quaerat dolor ut. Consectetur,
-              dolore ipsam placeat quam aut ullam similique mollitia,
-              aspernatur, non ratione officia corporis aliquid.
+              Sou desenvolvedor Front-end, estudo e atuo em projetos pessoais desde 2021.<br />
+              Me interessei por desenvolver sites e aplicativos para a web,
+              e por isso voltei meus estudo para Front-end.<br/>
+              Atualmente estou cursando Análise e Desenvolvimento de Sistemas na Estácio de Sá,
+              e também estou cursando o curso de Desenvolvimento Web na <a href="https://www.alura.com.br/">Alura</a>
+
             </p>
             <a href="#" className="btn">
               Ver mais
@@ -87,7 +89,9 @@ export function App() {
               </div>
               <div className="content">
                 <h2>HTML</h2>
-                <p>Lorem ipsum dolor sit amet repudiandae beatae ratione?</p>
+                <p>
+                  html é a linguagem de marcação de documentos web.
+                </p>
               </div>
             </div>
 
@@ -97,7 +101,9 @@ export function App() {
               </div>
               <div className="content">
                 <h2>CSS</h2>
-                <p>Lorem ipsum dolor sit amet repudiandae beatae ratione?</p>
+                <p>
+                  css é um lenguaje de estilo de programação que define a estrutura e o comportamento de um documento HTML.
+                </p>
               </div>
             </div>
 
@@ -108,12 +114,7 @@ export function App() {
               <div className="content">
                 <h2>Javascript</h2>
                 <p>
-                  Lorem ipsum dolor sit amet repudiandae beatae ratione? Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Ad
-                  consectetur animi error, tenetur consequatur sit enim
-                  laboriosam quis exercitationem laborum consequuntur. Quisquam
-                  voluptatum error iure quod tempora perferendis, quidem
-                  quaerat?
+                  JavaScript é um linguagem de programação que segue a linguagem de programação ECMAScript.
                 </p>
               </div>
             </div>
@@ -125,12 +126,7 @@ export function App() {
               <div className="content">
                 <h2>React.js</h2>
                 <p>
-                  Lorem ipsum dolor sit amet repudiandae beatae ratione? Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Ad
-                  consectetur animi error, tenetur consequatur sit enim
-                  laboriosam quis exercitationem laborum consequuntur. Quisquam
-                  voluptatum error iure quod tempora perferendis, quidem
-                  quaerat?
+                  React é uma biblioteca de JavaScript que permite a criação de interfaces de usuário através de componentes.
                 </p>
               </div>
             </div>
@@ -141,24 +137,25 @@ export function App() {
       <section className="sec stats" id="">
         <div className="content">
           <div className="mxw800p">
-            <h3>Meus trabalhos</h3>
+            <h3>Meus certificados
+            </h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reiciendis corporis quis culpa qua
+            Certificados de formaçoes front-end
             </p>
           </div>
           <div className="statsBox">
             <div className="box">
-              <h2>1200+</h2>
-              <h4>Projects</h4>
+              <h2>Alura</h2>
+              <a href="https://cursos.alura.com.br/certificate/0e73e370-7b32-4af8-b7bb-31dadad065b3" target="_blanck"><h4>Lógica de programação I: crie programas com Javascript e HTML</h4>
+              </a>
             </div>
             <div className="box">
-              <h2>800+</h2>
-              <h4>Happy clients</h4>
+              <h2>Alura</h2>
+              <h4>HTML e CSS</h4>
             </div>
             <div className="box">
-              <h2>150+</h2>
-              <h4>Countries</h4>
+              <h2>Rocketseat</h2>
+              <h4>Trilha Fundamentar</h4>
             </div>
             <div className="box">
               <h2>50+</h2>

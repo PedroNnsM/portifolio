@@ -102,7 +102,7 @@ header.sticky ul li a
 .banner h2 {
     text-align:  ;
     font-weight: 700;
-    color: #fff;
+    color: #4978ff;
     text-transform: uppercase;
     font-size: 1.7em;
 }
@@ -110,7 +110,7 @@ header.sticky ul li a
 
     font-size:5em;
     font-weight: 700;
-    color: #4978ff;
+    color: #fff;
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -128,6 +128,7 @@ header.sticky ul li a
     white-space: nowrap;
     overflow: hidden;
     font-family: 'Permanent Marker', cursive;
+    padding-left: 10px;
 }
 
 
@@ -183,7 +184,8 @@ p {
     width: 300px;
     margin: 0 auto;
     background: #fff;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 60px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -192,7 +194,7 @@ p {
 }
 
 .services .box .iconBx img {
-    max-width: 70px;
+    max-width: 100px;
     margin-bottom: 15px;
 }
 
@@ -205,7 +207,7 @@ p {
 
 .stats {
     background: #000;
-    padding-top: 250px;
+    padding-top: 150px;
     margin-top: -250px;
 }
 .stats h3,
