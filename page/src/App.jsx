@@ -1,14 +1,27 @@
-import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs';
-import { FaCodepen } from 'react-icons/fa';
-import img from './public/img.png';
+
+import  react  from './public/react.png';
+import  html  from './public/html.png';
+import  css  from './public/css.png';
+import  js  from './public/js.png';
+import  github  from './public/github.png';
+import  linkedin  from './public/linkedin.png';
+import  codepen  from './public/codepen.png';
+
+
 
 export function App() {
+  
 
   window.addEventListener('scroll', function(){
     var header = document.querySelector('header');
     header.classList.toggle("sticky", window.scrollY > 0);
     });
   
+   function Toggle() {
+    var header = document.querySelector('header');
+    header.classList.toggle("active");
+   } 
+
   return (
     <>
       <header id="header">
@@ -17,30 +30,31 @@ export function App() {
         </a>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={Toggle}>Home</a>
           </li>
           <li>
-            <a href="#sobre">Sobre</a>
+            <a href="#sobre" onClick={Toggle}>Sobre</a>
           </li>
           <li>
-            <a href="#tecnologias">Tecnologias</a>
+            <a href="#tecnologias" onClick={Toggle}>Tecnologias</a>
           </li>
           <li>
-            <a href="#portifolio">Portifolio</a>
+            <a href="#portifolio" onClick={Toggle}>Portifolio</a>
           </li>
           <li>
-            <a href="#contato">Contato</a>
-          </li>
-          <li>
-            <a href="#social">Redes</a>
-          </li>
+            <a href="#contato" onClick={Toggle}>Contato</a>
+          </li> 
         </ul>
+        <div className="toggle" onClick={Toggle}></div>
       </header>
 
       <section className="banner" id="home">
         <h2>
-          Desenvolvedor <span>Front-end</span>{" "}
-        </h2>
+          Olá, me chamo</h2> 
+          <h3>Pedro Nunes</h3>{" "} <br />
+        
+        <p>Sou Desenvolvedor <span> Front-end</span>  
+        </p>
       </section>
 
       <section className="sec" id="sobre">
@@ -48,10 +62,12 @@ export function App() {
           <div className="mxw800p">
             <h3>Sobre mim</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reiciendis corporis quis culpa quaerat dolor ut. Consectetur,
-              dolore ipsam placeat quam aut ullam similique mollitia,
-              aspernatur, non ratione officia corporis aliquid.
+              Sou desenvolvedor Front-end, estudo e atuo em projetos pessoais desde 2021.<br />
+              Me interessei por desenvolver sites e aplicativos para a web,
+              e por isso voltei meus estudo para Front-end.<br/>
+              Atualmente estou cursando Análise e Desenvolvimento de Sistemas na Estácio de Sá,
+              e também estou cursando o curso de Desenvolvimento Web na <a href="https://www.alura.com.br/">Alura</a>
+
             </p>
             <a href="#" className="btn">
               Ver mais
@@ -69,54 +85,48 @@ export function App() {
           <div className="services">
             <div className="box">
               <div className="iconBx">
-                <img src={img} />
+                <img src={html} />
               </div>
               <div className="content">
                 <h2>HTML</h2>
-                <p>Lorem ipsum dolor sit amet repudiandae beatae ratione?</p>
-              </div>
-            </div>
-
-            <div className="box">
-              <div className="iconBx">
-                <img src={img} />
-              </div>
-              <div className="content">
-                <h2>CSS</h2>
-                <p>Lorem ipsum dolor sit amet repudiandae beatae ratione?</p>
-              </div>
-            </div>
-
-            <div className="box">
-              <div className="iconBx">
-                <img src={img} />
-              </div>
-              <div className="content">
-                <h2>Javascript</h2>
                 <p>
-                  Lorem ipsum dolor sit amet repudiandae beatae ratione? Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Ad
-                  consectetur animi error, tenetur consequatur sit enim
-                  laboriosam quis exercitationem laborum consequuntur. Quisquam
-                  voluptatum error iure quod tempora perferendis, quidem
-                  quaerat?
+                  html é a linguagem de marcação de documentos web.
                 </p>
               </div>
             </div>
 
             <div className="box">
               <div className="iconBx">
-                <img src={img} />
+                <img src={css} />
+              </div>
+              <div className="content">
+                <h2>CSS</h2>
+                <p>
+                  css é um lenguaje de estilo de programação que define a estrutura e o comportamento de um documento HTML.
+                </p>
+              </div>
+            </div>
+
+            <div className="box">
+              <div className="iconBx">
+                <img src={js} />
+              </div>
+              <div className="content">
+                <h2>Javascript</h2>
+                <p>
+                  JavaScript é um linguagem de programação que segue a linguagem de programação ECMAScript.
+                </p>
+              </div>
+            </div>
+
+            <div className="box">
+              <div className="iconBx">
+                <img src={react} />
               </div>
               <div className="content">
                 <h2>React.js</h2>
                 <p>
-                  Lorem ipsum dolor sit amet repudiandae beatae ratione? Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Ad
-                  consectetur animi error, tenetur consequatur sit enim
-                  laboriosam quis exercitationem laborum consequuntur. Quisquam
-                  voluptatum error iure quod tempora perferendis, quidem
-                  quaerat?
+                  React é uma biblioteca de JavaScript que permite a criação de interfaces de usuário através de componentes.
                 </p>
               </div>
             </div>
@@ -127,24 +137,25 @@ export function App() {
       <section className="sec stats" id="">
         <div className="content">
           <div className="mxw800p">
-            <h3>Meus trabalhos</h3>
+            <h3>Meus certificados
+            </h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reiciendis corporis quis culpa qua
+            Certificados de formaçoes front-end
             </p>
           </div>
           <div className="statsBox">
             <div className="box">
-              <h2>1200+</h2>
-              <h4>Projects</h4>
+              <h2>Alura</h2>
+              <a href="https://cursos.alura.com.br/certificate/0e73e370-7b32-4af8-b7bb-31dadad065b3" target="_blanck"><h4>Lógica de programação I: crie programas com Javascript e HTML</h4>
+              </a>
             </div>
             <div className="box">
-              <h2>800+</h2>
-              <h4>Happy clients</h4>
+              <h2>Alura</h2>
+              <h4>HTML e CSS</h4>
             </div>
             <div className="box">
-              <h2>150+</h2>
-              <h4>Countries</h4>
+              <h2>Rocketseat</h2>
+              <h4>Trilha Fundamentar</h4>
             </div>
             <div className="box">
               <h2>50+</h2>
@@ -241,23 +252,24 @@ export function App() {
           <div className="sci">
             <ul>
               <li>
-                <a href="#">
-                  <BsLinkedin />
+                <a
+                  href="https://www.linkedin.com/in/pedro-nunes-m/"
+                  target="_blank"
+                >
+                  <img src={linkedin} />
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <BsGithub />
+                <a href="https://github.com/PedroNnsM" target="_blank">
+                  <img src={github} />
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <img src='/public/codepen.png' />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <BsInstagram />
+                <a
+                  href="https://codepen.io/pedro-nunes-the-lessful/"
+                  target="_blank"
+                >
+                  <img src={codepen} />
                 </a>
               </li>
             </ul>

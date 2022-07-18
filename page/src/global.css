@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Permanent+Marker&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Acme', sans-serif;
     color:#0D0D0D;
 }
 html{
@@ -17,13 +20,14 @@ body{
 
 header{
     position: fixed;
+    background: #0D6BA6;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 100px;
+    padding: 20px 100px;
     z-index: 1000;
     border-bottom: 1px solid #0D0D0D;
     transition: all 0.5s ease-in-out;
@@ -44,6 +48,7 @@ header .logo {
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
+    font-family: 'Acme', sans-serif;
 }
 
 header ul {
@@ -81,24 +86,51 @@ header.sticky ul li a
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: #0D6BA6;
+    background: url('./public/bg.jpg') repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     z-index: -1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    letter-spacing: 2px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .banner h2 {
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 2em;
-}
-.banner h2 span {
+    text-align:  ;
     font-weight: 700;
     color: #4978ff;
+    text-transform: uppercase;
+    font-size: 1.7em;
 }
+.banner h3{
+
+    font-size:5em;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.banner p {
+    font-weight: 700;
+    color: #4978ff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.banner p span {
+    border-rigth: 2px solid #fff;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Permanent Marker', cursive;
+    padding-left: 10px;
+}
+
 
 .sec {
     background: #fff;
@@ -152,7 +184,8 @@ p {
     width: 300px;
     margin: 0 auto;
     background: #fff;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 60px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -161,7 +194,7 @@ p {
 }
 
 .services .box .iconBx img {
-    max-width: 70px;
+    max-width: 100px;
     margin-bottom: 15px;
 }
 
@@ -174,7 +207,7 @@ p {
 
 .stats {
     background: #000;
-    padding-top: 250px;
+    padding-top: 150px;
     margin-top: -250px;
 }
 .stats h3,
@@ -335,4 +368,124 @@ p {
 
 .sci ul li a img {
     filter: invert(1);
+    max-width: 40px;
+}
+
+.sci ul li a:hover img {
+    opacity: 0.5;
+}
+
+.copyright a {
+    color: #0D6BA6;
+    text-decoration: none;
+}
+
+.toggle {
+    display: none;
+}
+
+@media (max-width:992px) {
+    .toggle {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .toggle:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        box-shadow: 0 10px 0 #000;
+        transition: 0.5s;
+    }
+    .toggle:after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    header,
+    header.sticky {
+        padding: 5px 50px;
+        background: #fff;
+    }
+    header ul {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    header.active ul {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 20px;
+    }
+    
+    header.active ul li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    header .logo,
+    header ul li a {
+        color: #4978ff;
+    }
+
+    .banner {
+        background-position: center;
+    }
+    .banner h2 {
+        font-size: 3em;
+        padding: 0 50px;
+    }
+
+    .sec {
+        padding: 100px 50px 50px 50px;
+    }
+    .services .box {
+        width: 100%;
+    }
+    .stats {
+        padding-top: 250px;
+
+    }
+    .row100 {
+        flex-direction: column;
+    }
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sci {
+        margin: 20px;
+    }
+
+    .sci ul li a img {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
 }
