@@ -6,6 +6,8 @@ import  js  from './public/js.png';
 import  github  from './public/github.png';
 import  linkedin  from './public/linkedin.png';
 import  codepen  from './public/codepen.png';
+import memoria from './public/memoria.png';
+import imc from './public/imc.png';
 
 
 
@@ -82,7 +84,7 @@ export function App() {
             <h3>Tecnologias que utilizo</h3>
             <p>Projetos realizados com as seguintes tecnologias:</p>
           </div>
-          <div className="services">
+          <div className="tec">
             <div className="box">
               <div className="iconBx">
                 <img src={html} />
@@ -169,24 +171,25 @@ export function App() {
           <div className="mxw800p">
             <h3>Projetos recentes</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reiciendis corporis quis culpa
+              Aqui são alguns dos meus projetos recentes.
             </p>
           </div>
           <div className="workBx">
             <div className="brand">
               <a href="#">
-                <h2>Brand</h2>
+                <img src={memoria} />
+                <h2>Jogo da Memória</h2>
               </a>
             </div>
             <div className="brand">
               <a href="#">
-                <h2>Brand</h2>
+                <img src={imc} />
+                <h2>IMC</h2>
               </a>
             </div>
             <div className="brand">
-              <a href="#">
-                <h2>Brand</h2>
+              <a href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr" target='_blanck'>
+                <h2>tabela de pontuação</h2>
               </a>
             </div>
             <div className="brand">
