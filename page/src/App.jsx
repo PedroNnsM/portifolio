@@ -1,13 +1,13 @@
 
-import  react  from './public/react.png';
-import  html  from './public/html.png';
-import  css  from './public/css.png';
-import  js  from './public/js.png';
-import  github  from './public/github.png';
-import  linkedin  from './public/linkedin.png';
-import  codepen  from './public/codepen.png';
-import memoria from './public/memoria.png';
-import imc from './public/imc.png';
+import  react  from './assets/react.png';
+import  html  from './assets/html.png';
+import  css  from './assets/css.png';
+import  js  from './assets/js.png';
+import  github  from './assets/github.png';
+import  linkedin  from './assets/linkedin.png';
+import  codepen  from './assets/codepen.png';
+import memoria from './assets/memoria.png';
+import imc from './assets/imc.png';
 
 
 

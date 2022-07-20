@@ -86,7 +86,7 @@ header.sticky ul li a
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url('./public/bg.jpg') repeat center center;
+    background: url('./assets/bg.jpg') repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -199,9 +199,9 @@ p {
     transition: 0.5s;
 }
 
-.tec .box:hover img {
+.tec .box .iconBx:hover img {
     position:relative;
-    transform: scale(1.2);
+    transform: scale(1.2) rotatey(360deg);
 }
 
 .tec .box h2 {
