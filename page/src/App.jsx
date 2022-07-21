@@ -8,11 +8,20 @@ import  linkedin  from './assets/linkedin.png';
 import  codepen  from './assets/codepen.png';
 import memoria from './assets/memoria.png';
 import imc from './assets/imc.png';
+import { Slider } from './components/carousel/Slider';
+import { SwiperSlide } from 'swiper/react';
+import './components/carousel/Slider.css';
 
 
 
 export function App() {
-  
+  const settings = {
+    slidesPerView: 2,
+    spaceBetween: 50,
+    navigation: true,
+    pagination: {
+      clickable: true, },
+  };
 
   window.addEventListener('scroll', function(){
     var header = document.querySelector('header');
@@ -32,30 +41,39 @@ export function App() {
         </a>
         <ul>
           <li>
-            <a href="#home" onClick={Toggle}>Home</a>
+            <a href="#home" onClick={Toggle}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="#sobre" onClick={Toggle}>Sobre</a>
+            <a href="#sobre" onClick={Toggle}>
+              Sobre
+            </a>
           </li>
           <li>
-            <a href="#tecnologias" onClick={Toggle}>Tecnologias</a>
+            <a href="#tecnologias" onClick={Toggle}>
+              Tecnologias
+            </a>
           </li>
           <li>
-            <a href="#portifolio" onClick={Toggle}>Portifolio</a>
+            <a href="#portifolio" onClick={Toggle}>
+              Portifolio
+            </a>
           </li>
           <li>
-            <a href="#contato" onClick={Toggle}>Contato</a>
-          </li> 
+            <a href="#contato" onClick={Toggle}>
+              Contato
+            </a>
+          </li>
         </ul>
         <div className="toggle" onClick={Toggle}></div>
       </header>
 
       <section className="banner" id="home">
-        <h2>
-          Olá, me chamo</h2> 
-          <h3>Pedro Nunes</h3>{" "} <br />
-        
-        <p>Sou Desenvolvedor <span> Front-end</span>  
+        <h2>Olá, me chamo</h2>
+        <h3>Pedro Nunes</h3> <br />
+        <p>
+          Sou Desenvolvedor <span> Front-end</span>
         </p>
       </section>
 
@@ -64,12 +82,15 @@ export function App() {
           <div className="mxw800p">
             <h3>Sobre mim</h3>
             <p>
-              Sou desenvolvedor Front-end, estudo e atuo em projetos pessoais desde 2021.<br />
-              Me interessei por desenvolver sites e aplicativos para a web,
-              e por isso voltei meus estudo para Front-end.<br/>
-              Atualmente estou cursando Análise e Desenvolvimento de Sistemas na Estácio de Sá,
-              e também estou cursando o curso de Desenvolvimento Web na <a href="https://www.alura.com.br/">Alura</a>
-
+              Sou desenvolvedor Front-end, estudo e atuo em projetos pessoais
+              desde 2021.
+              <br />
+              Me interessei por desenvolver sites e aplicativos para a web, e
+              por isso voltei meus estudo para Front-end.
+              <br />
+              Atualmente estou cursando Análise e Desenvolvimento de Sistemas na
+              Estácio de Sá, e também estou cursando o curso de Desenvolvimento
+              Web na <a href="https://www.alura.com.br/">Alura</a>
             </p>
             <a href="#" className="btn">
               Ver mais
@@ -91,9 +112,7 @@ export function App() {
               </div>
               <div className="content">
                 <h2>HTML</h2>
-                <p>
-                  html é a linguagem de marcação de documentos web.
-                </p>
+                <p>html é a linguagem de marcação de documentos web.</p>
               </div>
             </div>
 
@@ -104,7 +123,8 @@ export function App() {
               <div className="content">
                 <h2>CSS</h2>
                 <p>
-                  css é um lenguaje de estilo de programação que define a estrutura e o comportamento de um documento HTML.
+                  css é um lenguaje de estilo de programação que define a
+                  estrutura e o comportamento de um documento HTML.
                 </p>
               </div>
             </div>
@@ -116,7 +136,8 @@ export function App() {
               <div className="content">
                 <h2>Javascript</h2>
                 <p>
-                  JavaScript é um linguagem de programação que segue a linguagem de programação ECMAScript.
+                  JavaScript é um linguagem de programação que segue a linguagem
+                  de programação ECMAScript.
                 </p>
               </div>
             </div>
@@ -128,7 +149,8 @@ export function App() {
               <div className="content">
                 <h2>React.js</h2>
                 <p>
-                  React é uma biblioteca de JavaScript que permite a criação de interfaces de usuário através de componentes.
+                  React é uma biblioteca de JavaScript que permite a criação de
+                  interfaces de usuário através de componentes.
                 </p>
               </div>
             </div>
@@ -139,16 +161,19 @@ export function App() {
       <section className="sec stats" id="">
         <div className="content">
           <div className="mxw800p">
-            <h3>Meus certificados
-            </h3>
-            <p>
-            Certificados de formaçoes front-end
-            </p>
+            <h3>Meus certificados</h3>
+            <p>Certificados de formaçoes front-end</p>
           </div>
           <div className="statsBox">
             <div className="box">
               <h2>Alura</h2>
-              <a href="https://cursos.alura.com.br/certificate/0e73e370-7b32-4af8-b7bb-31dadad065b3" target="_blanck"><h4>Lógica de programação I: crie programas com Javascript e HTML</h4>
+              <a
+                href="https://cursos.alura.com.br/certificate/0e73e370-7b32-4af8-b7bb-31dadad065b3"
+                target="_blanck"
+              >
+                <h4>
+                  Lógica de programação I: crie programas com Javascript e HTML
+                </h4>
               </a>
             </div>
             <div className="box">
@@ -170,12 +195,10 @@ export function App() {
         <div className="content">
           <div className="mxw800p">
             <h3>Projetos recentes</h3>
-            <p>
-              Aqui são alguns dos meus projetos recentes.
-            </p>
+            <p>Aqui são alguns dos meus projetos recentes.</p>
           </div>
           <div className="workBx">
-            <div className="brand">
+            {/* <div className="brand">
               <a href="#">
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
@@ -188,39 +211,91 @@ export function App() {
               </a>
             </div>
             <div className="brand">
-              <a href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr" target='_blanck'>
+              <a
+                href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr"
+                target="_blanck"
+              >
                 <h2>tabela de pontuação</h2>
               </a>
             </div>
-            <div className="brand">
-              <a href="#">
-                <h2>Brand</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a href="#">
-                <h2>Brand</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a href="#">
-                <h2>Brand</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a href="#">
-                <h2>Brand</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a href="#">
-                <h2>Brand</h2>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
+            <div className="brand">
+              <a href="#">
+                <h2>Brand</h2>
+              </a>
+            </div>
+            <div className="brand">
+              <a href="#">
+                <h2>Brand</h2>
+              </a>
+            </div>
+            <div className="brand">
+              <a href="#">
+                <h2>Brand</h2>
+              </a>
+            </div>
+            <div className="brand">
+              <a href="#">
+                <h2>Brand</h2>
+              </a>
+            </div>
+            <div className="brand">
+              <a href="#">
+                <h2>Brand</h2>
+              </a>
+            </div>*/}
+
+        <Slider settings={settings} >
+          <SwiperSlide className="brand">
+              <a href="#">
+                <img src={memoria} />
+                <h2>Jogo da Memória</h2>
+              </a>
+          </SwiperSlide>
+          <SwiperSlide className="brand">
+         
+              <a href="#">
+                <img src={memoria} />
+                <h2>Jogo da Memória</h2>
+              </a>
+            
+          </SwiperSlide >
+          <SwiperSlide className="brand">
+           
+              <a href="#">
+                <img src={memoria} />
+                <h2>Jogo da Memória</h2>
+              </a>
+      
+          </SwiperSlide>
+          <SwiperSlide className="brand">
+           
+              <a href="#">
+                <img src={memoria} />
+                <h2>Jogo da Memória</h2>
+              </a>
+           
+          </SwiperSlide>
+          <SwiperSlide className="brand">
+            
+              <a href="#">
+                <img src={memoria} />
+                <h2>Jogo da Memória</h2>
+              </a>
+            
+          </SwiperSlide>
+          <SwiperSlide className="brand">
+            
+              <a href="#">
+                <img src={memoria} />
+                <h2>Jogo da Memória</h2>
+              </a>
+            
+          </SwiperSlide>
+        </Slider>
+        </div>
+        </div> 
+      </section>
       <section className="sec contact" id="contato">
         <div className="content">
           <div className="mxw800p">

@@ -201,7 +201,7 @@ p {
 
 .tec .box .iconBx:hover img {
     position:relative;
-    transform: scale(1.2) rotatey(360deg);
+    transform: scale(1.2) rotatey(180deg);
 }
 
 .tec .box h2 {
@@ -242,9 +242,7 @@ p {
 
 .workBx {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
+    height: 100%;
     max-width: 100%;
     margin-top: 40px;
 }
@@ -255,7 +253,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 250px;
-    min-height: 300px;
+    height: 80%;
     background: #4978ff;
     border-radius: 10px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
@@ -277,17 +275,17 @@ p {
     color: rgba(255, 255, 255, 1);
 }
 .workBx .brand a img {
+    padding: 20px 0 0 0;
     max-width: 80%;
     max-height: 50%;
     margin-bottom: 15px;
     transition: 0.5s;
-    opacity: 0.8;
+    opacity: 1;
     border-radius: 10px;
 }
-.workBx .brand:hover a img {
-    position:relative;
-    transform: scale(1.2);
-    opacity: 1;
+.workBx .brand a img:hover {
+
+    opacity: 0.2;
     
 }
 .contact{
