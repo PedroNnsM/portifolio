@@ -86,8 +86,9 @@ header.sticky ul li a
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url('./assets/bg.jpg') repeat center center;
-    background-size: cover;
+    background: url('./assets/bg.jpg');
+
+    background-size: repeat;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -96,7 +97,7 @@ header.sticky ul li a
     flex-direction: column;
     align-content: center;
     letter-spacing: 2px;
-    font-family: 'Permanent Marker', cursive;
+    font-family:  cursive;
 }
 
 .banner h2 {

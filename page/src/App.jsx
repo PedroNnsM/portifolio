@@ -6,7 +6,7 @@ import  js  from './assets/js.png';
 import  github  from './assets/github.png';
 import  linkedin  from './assets/linkedin.png';
 import  codepen  from './assets/codepen.png';
-import memoria from './assets/memoria.png';
+import memoria from './assets/memoria.svg';
 import imc from './assets/imc.png';
 import { Slider } from './components/carousel/Slider';
 import { SwiperSlide } from 'swiper/react';
@@ -247,14 +247,14 @@ export function App() {
 
         <Slider settings={settings} >
           <SwiperSlide className="brand">
-              <a href="#">
+              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
               </a>
           </SwiperSlide>
           <SwiperSlide className="brand">
          
-              <a href="#">
+              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
               </a>
@@ -262,7 +262,7 @@ export function App() {
           </SwiperSlide >
           <SwiperSlide className="brand">
            
-              <a href="#">
+              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
               </a>
@@ -270,7 +270,7 @@ export function App() {
           </SwiperSlide>
           <SwiperSlide className="brand">
            
-              <a href="#">
+              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
               </a>
@@ -278,7 +278,7 @@ export function App() {
           </SwiperSlide>
           <SwiperSlide className="brand">
             
-              <a href="#">
+              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
               </a>
@@ -286,7 +286,7 @@ export function App() {
           </SwiperSlide>
           <SwiperSlide className="brand">
             
-              <a href="#">
+              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
               </a>
