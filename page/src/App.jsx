@@ -7,7 +7,12 @@ import  github  from './assets/github.png';
 import  linkedin  from './assets/linkedin.png';
 import  codepen  from './assets/codepen.png';
 import memoria from './assets/memoria.svg';
-import imc from './assets/imc.png';
+import tabela from './assets/tabela.svg';
+import relogio from './assets/relogio.svg';
+import imc from './assets/imc.svg';
+import menu from './assets/menu.svg';
+import menuSocial from './assets/menuRedSocial.svg';
+import barbearia from './assets/barbearia.svg';
 import { Slider } from './components/carousel/Slider';
 import { SwiperSlide } from 'swiper/react';
 import './components/carousel/Slider.css';
@@ -16,7 +21,7 @@ import './components/carousel/Slider.css';
 
 export function App() {
   const settings = {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 50,
     navigation: true,
     pagination: {
@@ -90,7 +95,10 @@ export function App() {
               <br />
               Atualmente estou cursando Análise e Desenvolvimento de Sistemas na
               Estácio de Sá, e também estou cursando o curso de Desenvolvimento
-              Web na <a href="https://www.alura.com.br/">Alura</a>
+              Web na{" "}
+              <a href="https://www.alura.com.br/" target="_blanck">
+                Alura
+              </a>
             </p>
             <a href="#" className="btn">
               Ver mais
@@ -123,8 +131,8 @@ export function App() {
               <div className="content">
                 <h2>CSS</h2>
                 <p>
-                  css é um lenguaje de estilo de programação que define a
-                  estrutura e o comportamento de um documento HTML.
+                  css é um linguagem de estilo de programação que define o
+                  estilo e o comportamento de um documento HTML.
                 </p>
               </div>
             </div>
@@ -198,7 +206,7 @@ export function App() {
             <p>Aqui são alguns dos meus projetos recentes.</p>
           </div>
           <div className="workBx">
-            {/* <div className="brand">
+             <div className="brand">
               <a href="#">
                 <img src={memoria} />
                 <h2>Jogo da Memória</h2>
@@ -243,58 +251,75 @@ export function App() {
               <a href="#">
                 <h2>Brand</h2>
               </a>
-            </div>*/}
+            </div>
 
-        <Slider settings={settings} >
-          <SwiperSlide className="brand">
-              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
-                <img src={memoria} />
-                <h2>Jogo da Memória</h2>
-              </a>
-          </SwiperSlide>
-          <SwiperSlide className="brand">
-         
-              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
-                <img src={memoria} />
-                <h2>Jogo da Memória</h2>
-              </a>
-            
-          </SwiperSlide >
-          <SwiperSlide className="brand">
-           
-              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
-                <img src={memoria} />
-                <h2>Jogo da Memória</h2>
-              </a>
-      
-          </SwiperSlide>
-          <SwiperSlide className="brand">
-           
-              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
-                <img src={memoria} />
-                <h2>Jogo da Memória</h2>
-              </a>
-           
-          </SwiperSlide>
-          <SwiperSlide className="brand">
-            
-              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
-                <img src={memoria} />
-                <h2>Jogo da Memória</h2>
-              </a>
-            
-          </SwiperSlide>
-          <SwiperSlide className="brand">
-            
-              <a href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/" target='_blanck'>
-                <img src={memoria} />
-                <h2>Jogo da Memória</h2>
-              </a>
-            
-          </SwiperSlide>
-        </Slider>
+            <Slider settings={settings}>
+              <SwiperSlide >
+                <a
+                  href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/"
+                  target="_blanck"
+                >
+                  <img src={memoria} />
+                  <h2>Jogo da Memória</h2>
+                </a>
+              </SwiperSlide>
+
+              <SwiperSlide >
+                <a
+                  href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr"
+                  target="_blanck"
+                >
+                  <img src={tabela} />
+                  <h2>Tabela de classificacão</h2>
+                </a>
+              </SwiperSlide>
+
+              <SwiperSlide >
+                <a
+                  href="https://codepen.io/pedro-nunes-the-lessful/pen/XWZOGbN"
+                  target="_blanck"
+                >
+                  <img src={relogio} />
+                  <h2>Relógio digital</h2>
+                </a>
+              </SwiperSlide>
+
+              <SwiperSlide >
+                <a
+                  href="https://codepen.io/pedro-nunes-the-lessful/pen/ExExNVZ"
+                  target="_blanck"
+                >
+                  <img src={imc} />
+                  <h2>Calculadora de IMC</h2>
+                </a>
+              </SwiperSlide>
+
+              <SwiperSlide >
+                <a
+                  href="https://codepen.io/pedro-nunes-the-lessful/pen/KKQbxQB"
+                  target="_blanck"
+                >
+                  <img src={menu} />
+                  <h2>Menu</h2>
+                </a>
+              </SwiperSlide>
+
+              <SwiperSlide >
+                <a href="https://menu-social.vercel.app/" target="_blanck">
+                  <img src={menuSocial} />
+                  <h2>Menu Social</h2>
+                </a>
+              </SwiperSlide>
+
+              <SwiperSlide >
+                <a href="https://github.com/PedroNnsM/barbeariaALura" target="_blanck">
+                  <img src={barbearia} />
+                  <h2>Barbearia Alura</h2>
+                </a>
+              </SwiperSlide>
+            </Slider>
+          </div>
         </div>
-        </div> 
       </section>
       <section className="sec contact" id="contato">
         <div className="content">
