@@ -1,0 +1,87 @@
+.swiper {
+
+   width: 100%;
+   padding:0 50px 50px 50px;
+}
+
+.swiper-slide {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #4978ff;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+}
+.swiper-slide:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+    background: #024873;
+}
+
+.swiper-slide a {
+    text-decoration: none;
+    color: rbga(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+.swiper-slide a span {
+    display:none;
+  
+}
+.swiper-slide:hover a span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(250, 250, 250, 0.8);
+    font-weight: bold;
+    opacity: 1;
+
+}
+.swiper-slide a h2{
+    font-size: 1.5em;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+.swiper-slide:hover h2 {
+    opacity: 0;
+}
+.swiper-slide a img {
+    padding: 20px 0;
+    width: 80%;
+    margin-bottom: 15px;
+    transition: 0.5s;
+    border-radius: 15%;
+}
+.swiper-slide:hover a img {
+    transform: scale(0.9);
+    opacity: 0.2;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+@media (max-width:992px) {
+    .swiper {
+        display: none;
+    }
+}

@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    weight: 400;
     color:#0D0D0D;
 }
 html{
@@ -69,7 +71,7 @@ header ul li a {
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
     text-transform: uppercase;
     transition: 0.6s;
@@ -86,8 +88,8 @@ header.sticky ul li a
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url('./public/bg.jpg') repeat center center;
-    background-size: cover;
+    background: url('./assets/bg.jpg');
+    background-size: repeat;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -96,7 +98,7 @@ header.sticky ul li a
     flex-direction: column;
     align-content: center;
     letter-spacing: 2px;
-    font-family: 'Permanent Marker', cursive;
+    font-family:  cursive;
 }
 
 .banner h2 {
@@ -151,15 +153,15 @@ header.sticky ul li a
 }
 h3 {
     font-size: 40px;
-    font-weight: 200;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 p {
     position: relative;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 .btn {
     position: relative;
@@ -169,9 +171,37 @@ p {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
+    cursor: pointer;
+}
+.saibaMais {
+    display:block;
+}
+.saibaMais .saibaContent {
+    position: relative;
+    width:100%;
+}
+.saibaContent .saibaContent-text {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    vertical-align: baseline;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    letter-spacing: 1px;
+}
+.saibaMais img {
+    margin-left: 10px;
+    position: relative;
+    float: right;
+    width: 45%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.services {
+.tec {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -180,7 +210,7 @@ p {
     margin-top: 40px;
 }
 
-.services .box {
+.tec .box {
     width: 300px;
     margin: 0 auto;
     background: #fff;
@@ -189,16 +219,22 @@ p {
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-.services .box .iconBx {
+.tec .box .iconBx {
     margin-top: 20px;
 }
 
-.services .box .iconBx img {
+.tec .box .iconBx img {
     max-width: 100px;
     margin-bottom: 15px;
+    transition: 0.5s;
 }
 
-.services .box h2 {
+.tec .box .iconBx:hover img {
+    position:relative;
+    transform: scale(1.2) rotatey(360deg);
+}
+
+.tec .box h2 {
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
@@ -235,39 +271,14 @@ p {
 }
 
 .workBx {
+    margin: 0 auto;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
-    max-width: 100%;
+    height: 100%;
+    max-width: 950px;
     margin-top: 40px;
 }
 .workBx .brand {
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    min-height: 300px;
-    background: #4978ff;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
-}
-.workBx .brand:hover {
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
-    background: #555;
-}
-
-.workBx .brand a {
-    text-decoration: none;
-    color: rbga(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 2px;
-}
-
-.workBx .brand:hover a h2 {
-    color: rgba(255, 255, 255, 1);
+    display: none;
 }
 
 .contact{
@@ -454,7 +465,18 @@ p {
         background-position: center;
     }
     .banner h2 {
+        text-align: center;
         font-size: 3em;
+        padding: 0 50px;
+    }
+    .banner h3 {
+        text-align: center;
+        font-size: 5.5em;
+        padding: 0 50px;
+    }
+    .banner p {
+        text-align: center;
+        font-size: 1.5em;
         padding: 0 50px;
     }
 
@@ -467,6 +489,75 @@ p {
     .stats {
         padding-top: 250px;
 
+    }
+    .workBx {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 30px;
+        max-width: 100%;
+        margin-top: 40px;
+    }
+    .workBx .brand {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        min-height: 300px;
+        background: #4978ff;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        transition: 0.5s;
+    }
+    .workBx .brand:hover {
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
+        background: #024873;
+    }
+    
+    .workBx .brand a {
+        text-decoration: none;
+        color: rbga(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        font-size: 1em;
+        letter-spacing: 2px;
+    }
+    .workBx .brand a h2 {
+        padding: 15px;
+    }
+    .workBx .brand:hover a h2{
+        opacity:0;
+    }
+    
+    .workBx .brand a img {
+        padding: 10px;
+        width:250px;
+        opacity: 1;
+        border-radius: 15%;
+    }
+    .workBx .brand:hover a img {
+        opacity: 0.2;
+        
+        
+    }
+    .workBx .brand a span {
+        display:none;
+      
+    }
+    .workBx .brand:hover a span {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+        text-shadow: 0px 0px 10px rgba(250, 250, 250, 0.8);
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        font-weight: bold;
+        opacity: 1;
+    
     }
     .row100 {
         flex-direction: column;
