@@ -159,7 +159,7 @@ p {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 .btn {
     position: relative;
@@ -169,6 +169,34 @@ p {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
+    cursor: pointer;
+}
+.saibaMais {
+    display: inline-block;
+}
+.saibaMais .saibaContent {
+    position: relative;
+    display: inline-block;
+    width:100%;
+}
+.saibaContent .saibaContent-text {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    letter-spacing: 1px;
+}
+.saibaMais img {
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .tec {
@@ -478,7 +506,8 @@ p {
         min-height: 300px;
         background: #4978ff;
         box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
-        border-radius: 15px
+        border-radius: 15px;
+        transition: 0.5s;
     }
     .workBx .brand:hover {
         box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
@@ -492,6 +521,12 @@ p {
         font-size: 1em;
         letter-spacing: 2px;
     }
+    .workBx .brand a h2 {
+        padding: 15px;
+    }
+    .workBx .brand:hover a h2{
+        opacity:0;
+    }
     
     .workBx .brand a img {
         padding: 10px;
@@ -499,10 +534,27 @@ p {
         opacity: 1;
         border-radius: 15%;
     }
-    .workBx .brand a img:hover {
-    
+    .workBx .brand:hover a img {
         opacity: 0.2;
         
+        
+    }
+    .workBx .brand a span {
+        display:none;
+      
+    }
+    .workBx .brand:hover a span {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        font-weight: bold;
+        opacity: 1;
+    
     }
     .row100 {
         flex-direction: column;
