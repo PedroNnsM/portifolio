@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    weight: 400;
     color:#0D0D0D;
 }
 html{
@@ -69,7 +71,7 @@ header ul li a {
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
     text-transform: uppercase;
     transition: 0.6s;
@@ -151,13 +153,13 @@ header.sticky ul li a
 }
 h3 {
     font-size: 40px;
-    font-weight: 200;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 p {
     position: relative;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 20px;
     letter-spacing: 1.5px;
 }
@@ -172,18 +174,18 @@ p {
     cursor: pointer;
 }
 .saibaMais {
-    display: inline-block;
+    display:block;
 }
 .saibaMais .saibaContent {
     position: relative;
-    display: inline-block;
     width:100%;
 }
 .saibaContent .saibaContent-text {
     position: relative;
     vertical-align: top;
     display: inline-block;
-    width: 50%;
+    width: 100%;
+    vertical-align: baseline;
     text-align: left;
     font-size: 20px;
     font-weight: 300;
@@ -193,7 +195,7 @@ p {
 .saibaMais img {
     margin-left: 10px;
     position: relative;
-    display: inline-block;
+    float: right;
     width: 45%;
     height: auto;
     margin-bottom: 20px;

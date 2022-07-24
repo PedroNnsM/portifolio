@@ -24,7 +24,8 @@ import './components/carousel/Slider.css';
 
 
 export function App() {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true);
+
   const settings = {
     slidesPerView: 2,
     spaceBetween: 50,
@@ -52,7 +53,7 @@ export function App() {
         <ul>
           <li>
             <a href="#home" onClick={Toggle}>
-              Home
+              Início
             </a>
           </li>
           <li>
@@ -113,25 +114,34 @@ export function App() {
                 <div className="saibaContent">
                   <div className="saibaContent-text">
 
+                 <img src={foto} alt="memoria" />
                   <p>
-                   Sou natural de Porto Alegre RS, mas moro em Florianópolis SC.
+                    Sou natural de Porto Alegre RS, mas moro em Florianópolis SC.
                     <br />
-                    Sempre gostei muito de tecnologia, e jogos eletronicos.
                     <br />
-                    porem ainda não tenho conhecimento de programação, e que isso era muito dificil para mim.
+                    
+                    Sempre amei tecnologia e jogos eletrônicos.
+                    No entanto, eu ainda não tinha conhecimento de programação e achava que a área de tecnologia seria muito difícil para mim.
                     <br />
-                    Mas com o nascimento de meu filho, eu comecei a estudar
-                    programação. Queria dar um futuro ao meu filho, e mostrar que nunca é tarde para aprender.
                     <br />
-                    Com o tempo eu consegui aprender mais sobre programação, e
-                    também mais sobre tecnologia.
+                    Com o nascimento do meu filho comecei a procurar mudanças na minha vida e foi aí que ingressei na faculdade de Análise e Desenvolvimento de Sistemas. Queria dar um futuro melhor ao meu filho e mostrar que nunca é tarde para aprender.
+                    <br />
+                    <br />
+                    Com o tempo, entrei em comunidades de desenvolvimento e conheci diversos profissionais que me ensinaram muito.
+                    <br />
                     <br />
                     Hoje sou desenvolvedor Front-end e cada vez mais apaixonado por essa área.
                     <br />
-                    Gosto muito de aprender coisas novas e a area de tecnologia é muito interessante o fato de estar em costante aprendizado.
+                    <br />
+                    Gosto muito de aprender coisas novas e a área de tecnologia me possibilita estar em constante aprendizado.
+                    <br />
+                    <br />
+                    Tenho como objetivo estar sempre atualizado com as novas tecnologias e ajudar os outros a aprender também.
+                    <br />
+                    
                   </p>
-                 
-                  </div><img src={foto} alt="memoria" />
+
+                  </div>
                 </div>
                 
                 <button className="btn bt2" onClick={() => setShow(!show)}>
@@ -180,7 +190,7 @@ export function App() {
               <div className="content">
                 <h2>Javascript</h2>
                 <p>
-                  JavaScript é um linguagem de programação que segue a linguagem
+                  JavaScript é uma linguagem de programação que segue a linguagem
                   de programação ECMAScript.
                 </p>
               </div>
@@ -522,8 +532,7 @@ export function App() {
           <div className="mxw800p">
             <h3>Entre em contato </h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reiciendis corporis
+              Se preferir entre em contato prenchendo o formulário abaixo ou através das redes socias abaixo.
             </p>
           </div>
           <div className="contactForm">
