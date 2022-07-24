@@ -527,18 +527,24 @@ export function App() {
             </p>
           </div>
           <div className="contactForm">
-            <form action="#">
+            <form action="https://formsubmit.co/pedro.nunes.developer@gmail.com" method="POST">
               <div className="row100">
                 <div className="inputBx50">
-                  <input type="text" name="" placeholder="Nome completo" />
+                  <input type="text" name="nome" placeholder="Nome completo" />
                 </div>
                 <div className="inputBx50">
-                  <input type="text" name="" placeholder="Email" />
+                <input type="hidden" name="_autoresponse" value="Mensagem recebida com sucesso, obrigado por entrar em contato e responderei em breve " />
+                  <input type="text" name="email" placeholder="Email" />
                 </div>
               </div>
               <div className="row100">
                 <div className="inputBx100">
-                  <textarea name="" placeholder="Mensagem" />
+                  <input name="assunto" placeholder="Assunto" />
+                </div>
+              </div>
+              <div className="row100">
+                <div className="inputBx100">
+                  <textarea name="mensagem" placeholder="Mensagem" />
                 </div>
               </div>
               <div className="row100">

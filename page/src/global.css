@@ -511,7 +511,7 @@ p {
     }
     .workBx .brand:hover {
         box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
-        background: #555;
+        background: #024873;
     }
     
     .workBx .brand a {
@@ -550,6 +550,7 @@ p {
         left: 50%;
         transform: translate(-50%, -50%);
         color: #000;
+        text-shadow: 0px 0px 10px rgba(250, 250, 250, 0.8);
         font-size: 1.5em;
         letter-spacing: 2px;
         font-weight: bold;
