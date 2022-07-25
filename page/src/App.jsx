@@ -93,57 +93,66 @@ export function App() {
           <div className="mxw800p">
             <h3>Sobre mim</h3>
             {show ? (
-            <><p>
-                Sou desenvolvedor Front-end, estudo e atuo em projetos pessoais
-                desde 2021.
-                <br />
-                Me interessei por desenvolver sites e aplicativos para a web, e
-                por isso voltei meus estudo para Front-end.
-                <br />
-                Atualmente estou cursando Análise e Desenvolvimento de Sistemas na
-                Estácio de Sá, e também estou cursando o curso de Desenvolvimento
-                Web na{" "}
-                <a href="https://www.alura.com.br/" target="_blanck">
-                  Alura
-                </a>
-              </p><button className="btn" onClick={() => setShow(!show)}>
+              <>
+                <p>
+                  Sou desenvolvedor Front-end, estudo e atuo em projetos
+                  pessoais desde 2021.
+                  <br />
+                  Me interessei por desenvolver sites e aplicativos para a web,
+                  e por isso voltei meus estudo para Front-end.
+                  <br />
+                  Atualmente estou cursando Análise e Desenvolvimento de
+                  Sistemas na Estácio de Sá, e também estou cursando o curso de
+                  Desenvolvimento Web na{" "}
+                  <a href="https://www.alura.com.br/" target="_blanck">
+                    Alura
+                  </a>
+                </p>
+                <button className="btn" onClick={() => setShow(!show)}>
                   Ver mais
-                </button></>
+                </button>
+              </>
             ) : (
               <div className="saibaMais">
                 <div className="saibaContent">
                   <div className="saibaContent-text">
-
-                 <img src={foto} alt="memoria" />
-                  <p>
-                    Sou natural de Porto Alegre RS, mas moro em Florianópolis SC.
-                    <br />
-                    <br />
-                    
-                    Sempre amei tecnologia e jogos eletrônicos.
-                    No entanto, eu ainda não tinha conhecimento de programação e achava que a área de tecnologia seria muito difícil para mim.
-                    <br />
-                    <br />
-                    Com o nascimento do meu filho comecei a procurar mudanças na minha vida e foi aí que ingressei na faculdade de Análise e Desenvolvimento de Sistemas. Queria dar um futuro melhor ao meu filho e mostrar que nunca é tarde para aprender.
-                    <br />
-                    <br />
-                    Com o tempo, entrei em comunidades de desenvolvimento e conheci diversos profissionais que me ensinaram muito.
-                    <br />
-                    <br />
-                    Hoje sou desenvolvedor Front-end e cada vez mais apaixonado por essa área.
-                    <br />
-                    <br />
-                    Gosto muito de aprender coisas novas e a área de tecnologia me possibilita estar em constante aprendizado.
-                    <br />
-                    <br />
-                    Tenho como objetivo estar sempre atualizado com as novas tecnologias e ajudar os outros a aprender também.
-                    <br />
-                    
-                  </p>
-
+                    <img src={foto} alt="memoria" />
+                    <p>
+                      Sou natural de Porto Alegre RS, mas moro em Florianópolis
+                      SC.
+                      <br />
+                      <br />
+                      Sempre amei tecnologia e jogos eletrônicos. No entanto, eu
+                      ainda não tinha conhecimento de programação e achava que a
+                      área de tecnologia seria muito difícil para mim.
+                      <br />
+                      <br />
+                      Com o nascimento do meu filho comecei a procurar mudanças
+                      na minha vida e foi aí que ingressei na faculdade de
+                      Análise e Desenvolvimento de Sistemas. Queria dar um
+                      futuro melhor ao meu filho e mostrar que nunca é tarde
+                      para aprender.
+                      <br />
+                      <br />
+                      Com o tempo, entrei em comunidades de desenvolvimento e
+                      conheci diversos profissionais que me ensinaram muito.
+                      <br />
+                      <br />
+                      Hoje sou desenvolvedor Front-end e cada vez mais
+                      apaixonado por essa área.
+                      <br />
+                      <br />
+                      Gosto muito de aprender coisas novas e a área de
+                      tecnologia me possibilita estar em constante aprendizado.
+                      <br />
+                      <br />
+                      Tenho como objetivo estar sempre atualizado com as novas
+                      tecnologias e ajudar os outros a aprender também.
+                      <br />
+                    </p>
                   </div>
                 </div>
-                
+
                 <button className="btn bt2" onClick={() => setShow(!show)}>
                   Ver menos
                 </button>
@@ -166,7 +175,7 @@ export function App() {
               </div>
               <div className="content">
                 <h2>HTML</h2>
-                <p>html é a linguagem de marcação de documentos web.</p>
+                <p>HTML é a linguagem de marcação de documentos web.</p>
               </div>
             </div>
 
@@ -177,7 +186,7 @@ export function App() {
               <div className="content">
                 <h2>CSS</h2>
                 <p>
-                  css é um linguagem de estilo de programação que define o
+                  Css é uma linguagem de estilo de programação que define o
                   estilo e o comportamento de um documento HTML.
                 </p>
               </div>
@@ -190,8 +199,8 @@ export function App() {
               <div className="content">
                 <h2>Javascript</h2>
                 <p>
-                  JavaScript é uma linguagem de programação que segue a linguagem
-                  de programação ECMAScript.
+                  JavaScript é uma linguagem de programação que segue a
+                  linguagem de programação ECMAScript.
                 </p>
               </div>
             </div>
@@ -216,7 +225,7 @@ export function App() {
         <div className="content">
           <div className="mxw800p">
             <h3>Meus certificados</h3>
-            <p>Certificados de formaçoes front-end</p>
+            <p>Certificados de formações front-end</p>
           </div>
           <div className="statsBox">
             <div className="box">
@@ -532,17 +541,25 @@ export function App() {
           <div className="mxw800p">
             <h3>Entre em contato </h3>
             <p>
-              Se preferir entre em contato prenchendo o formulário abaixo ou através das redes socias abaixo.
+              Se preferir entre em contato prenchendo o formulário abaixo ou
+              através das redes socias abaixo.
             </p>
           </div>
           <div className="contactForm">
-            <form action="https://formsubmit.co/pedro.nunes.developer@gmail.com" method="POST">
+            <form
+              action="https://formsubmit.co/pedro.nunes.developer@gmail.com"
+              method="POST"
+            >
               <div className="row100">
                 <div className="inputBx50">
                   <input type="text" name="nome" placeholder="Nome completo" />
                 </div>
                 <div className="inputBx50">
-                <input type="hidden" name="_autoresponse" value="Mensagem recebida com sucesso, obrigado por entrar em contato e responderei em breve " />
+                  <input
+                    type="hidden"
+                    name="_autoresponse"
+                    value="Mensagem recebida com sucesso, obrigado por entrar em contato e responderei em breve "
+                  />
                   <input type="text" name="email" placeholder="Email" />
                 </div>
               </div>
