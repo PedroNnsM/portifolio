@@ -3,7 +3,7 @@ import html from "../../assets/img/html.png";
 
 const mockData = [
     {
-        imagem:html,
+        imagem: ,
         name: "HTML",
         descricao: "HTML é a linguagem de marcação de documentos web"
     }];
@@ -13,7 +13,7 @@ const mockData = [
 
 
 
-export function Tecnologias(imagem: string, name: string, descricao: string) {
+export function Tecnologias() {
    return (
     <div className="box">
     <div className="iconBx">
