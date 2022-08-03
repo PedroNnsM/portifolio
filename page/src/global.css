@@ -150,6 +150,7 @@ header.sticky ul li a
 .mxw800p {
     max-width: 800px;
     margin: 0 auto;
+    text-align: left;
 }
 h3 {
     font-size: 40px;
@@ -215,7 +216,7 @@ p {
     margin: 0 auto;
     background: #fff;
     border-radius: 10px;
-    padding: 60px;
+    padding: 30px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
 }
 

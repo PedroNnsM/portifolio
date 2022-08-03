@@ -13,7 +13,7 @@ import imc from './assets/imc.svg';
 import menu from './assets/menu.svg';
 import menuSocial from './assets/menuRedSocial.svg';
 import barbearia from './assets/barbearia.svg';
-import foto   from './assets/foto.jpg';
+import foto   from './assets/foto.png';
 
 import { useState } from 'react';
 import { Slider } from './components/carousel/Slider';
