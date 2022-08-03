@@ -13,7 +13,7 @@ import imc from './assets/imc.svg';
 import menu from './assets/menu.svg';
 import menuSocial from './assets/menuRedSocial.svg';
 import barbearia from './assets/barbearia.svg';
-import foto   from './assets/foto.jpg';
+import foto   from './assets/foto.png';
 
 import { useState } from 'react';
 import { Slider } from './components/carousel/Slider';
@@ -273,7 +273,7 @@ export function App() {
           <div className="workBx">
             <div className="brand">
               <a
-                href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/"
+                href="https://pedronunes-jogo-da-memoria.vercel.app/"
                 target="_blanck"
               >
                 <img src={memoria} />
@@ -402,7 +402,7 @@ export function App() {
             <Slider settings={settings}>
               <SwiperSlide>
                 <a
-                  href="https://jogo-da-memoria-472e673cq-pedronnsm.vercel.app/"
+                  href="https://pedronunes-jogo-da-memoria.vercel.app/"
                   target="_blanck"
                 >
                   <img src={memoria} />
