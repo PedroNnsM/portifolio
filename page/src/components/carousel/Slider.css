@@ -15,16 +15,23 @@
     border-radius: 10px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
 }
+.swiper-slide p {
+    text-align: left;
+    color: #fff;
+}
 .swiper-slide:hover {
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
     background: #024873;
 }
 
 .swiper-slide  {
+    display: flex;
     text-decoration: none;
     color: rbga(255, 255, 255, 0.5);
     font-size: 1em;
     letter-spacing: 2px;
+    flex-direction: column;
+
 }
 .swiper-slide  span {
     display:none;
@@ -80,21 +87,11 @@
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background: #024873;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
-.teste {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 1;
-}
-.teste p {
-    text-align: left;
-    color: #fff;
-}
+
+
 a {
     text-decoration: none;
     

@@ -422,116 +422,128 @@ export function App() {
               </SwiperSlide>
 
               <SwiperSlide>
-                <a
+                
+                  <img src={tabela} />
+                  <span>
+                  <p>
+                    Um Exemplo de texto
+                  </p>
+                  <a
                   href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr"
                   target="_blanck"
                 >
-                  <img src={tabela} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
-                  </span>
+                    <button>Demo</button>
+                  </a>
+                  <a href="">
+                    <BsGithub /> Github
+                  </a>
+                </span>
                   <h2>Tabela de classificacão</h2>
-                </a>
+             
               </SwiperSlide>
 
               <SwiperSlide>
-                <a
+                  <img src={relogio} />
+                  <span>
+                  <p>
+                    Um Exemplo de texto
+                  </p>
+                  <a
                   href="https://codepen.io/pedro-nunes-the-lessful/pen/XWZOGbN"
                   target="_blanck"
                 >
-                  <img src={relogio} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
+                    <button>Demo</button>
+                  </a>
+                  <a href="">
+                    <BsGithub /> Github
+                  </a>
                   </span>
                   <h2>Relógio digital</h2>
-                </a>
+
               </SwiperSlide>
 
               <SwiperSlide>
-                <a
+               
+                  <img src={imc} />
+                  <span>
+                  <p>
+                    Um Exemplo de texto
+                  </p>
+                  <a
                   href="https://codepen.io/pedro-nunes-the-lessful/pen/ExExNVZ"
                   target="_blanck"
                 >
-                  <img src={imc} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
+                    <button>Demo</button>
+                  </a>
+                  <a href="">
+                    <BsGithub /> Github
+                  </a>
                   </span>
                   <h2>Calculadora de IMC</h2>
-                </a>
+                
               </SwiperSlide>
 
               <SwiperSlide>
-                <a
+               
+                  <img src={menu} />
+                  <span>
+                  <p>
+                    Um Exemplo de texto
+                  </p>
+                  <a
                   href="https://codepen.io/pedro-nunes-the-lessful/pen/KKQbxQB"
                   target="_blanck"
                 >
-                  <img src={menu} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
+                    <button>Demo</button>
+                  </a>
+                  <a href="">
+                    <BsGithub /> Github
+                  </a>
                   </span>
                   <h2>Menu</h2>
-                </a>
+                
               </SwiperSlide>
 
               <SwiperSlide>
-                <a href="https://menu-social.vercel.app/" target="_blanck">
+                
                   <img src={menuSocial} />
                   <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
+                  <p>
+                    Um Exemplo de texto
+                  </p>
+                  <a
+                  href="https://menu-social.vercel.app/"
+                  target="_blanck"
+                >
+                    <button>Demo</button>
+                  </a>
+                  <a href="">
+                    <BsGithub /> Github
+                  </a>
                   </span>
                   <h2>Menu Social</h2>
-                </a>
+                
               </SwiperSlide>
 
               <SwiperSlide>
-                <a
+                
+                  <img src={barbearia} />
+                  <span>
+                  <p>
+                    Um Exemplo de texto
+                  </p>
+                  <a
                   href="https://github.com/PedroNnsM/barbeariaALura"
                   target="_blanck"
                 >
-                  <img src={barbearia} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
+                    <button>Demo</button>
+                  </a>
+                  <a href="">
+                    <BsGithub /> Github
+                  </a>
                   </span>
                   <h2>Barbearia Alura</h2>
-                </a>
+                
               </SwiperSlide>
             </Slider>
           </div>
