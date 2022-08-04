@@ -152,6 +152,10 @@ header.sticky ul li a
     margin: 0 auto;
     text-align: left;
 }
+
+.center{
+    text-align: center;
+}
 h3 {
     font-size: 40px;
     font-weight: 400;

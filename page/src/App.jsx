@@ -19,6 +19,7 @@ import { useState } from 'react';
 import { Slider } from './components/carousel/Slider';
 import { SwiperSlide } from 'swiper/react';
 import './components/carousel/Slider.css';
+import {BsGithub} from 'react-icons/bs';
 
 
 
@@ -82,7 +83,8 @@ export function App() {
 
       <section className="banner" id="home">
         <h2>Olá, me chamo</h2>
-        <h3>Pedro Nunes</h3> <br />
+        <h3>Pedro Nunes</h3>
+        <br />
         <p>
           Sou Desenvolvedor <span> Front-end</span>
         </p>
@@ -164,7 +166,7 @@ export function App() {
 
       <section className="sec" id="tecnologias">
         <div className="content">
-          <div className="mxw800p">
+          <div className="mxw800p center">
             <h3>Tecnologias que utilizo</h3>
             <p>Projetos realizados com as seguintes tecnologias:</p>
           </div>
@@ -223,7 +225,7 @@ export function App() {
 
       <section className="sec stats" id="">
         <div className="content">
-          <div className="mxw800p">
+          <div className="mxw800p center">
             <h3>Meus certificados</h3>
             <p>Certificados de formações front-end</p>
           </div>
@@ -266,7 +268,7 @@ export function App() {
       </section>
       <section className="sec work" id="portifolio">
         <div className="content">
-          <div className="mxw800p">
+          <div className="mxw800p center">
             <h3>Projetos recentes</h3>
             <p>Aqui são alguns dos meus projetos recentes.</p>
           </div>
@@ -400,24 +402,23 @@ export function App() {
             </div>
 
             <Slider settings={settings}>
-              <SwiperSlide>
-                <a
-                  href="https://pedronunes-jogo-da-memoria.vercel.app/"
-                  target="_blanck"
-                >
-                  <img src={memoria} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
-                  </span>
-                  <h2>Jogo da Memória</h2>
-                </a>
+              <SwiperSlide className='teste'>
+                <img src={memoria} />
+                <span>
+                  <p>
+                    Um jogo da memoria criado com fotos de aves para trazer uma bricadeira para meu filho 
+                  </p>
+                  <a
+                    href="https://pedronunes-jogo-da-memoria.vercel.app/"
+                    target="_blanck"
+                  >
+                    <button>Demo</button>
+                  </a>
+                  <a href="">
+                    <BsGithub /> Github
+                  </a>
+                </span>
+                <h2>Jogo da Memória</h2>
               </SwiperSlide>
 
               <SwiperSlide>
@@ -539,7 +540,7 @@ export function App() {
       <section className="sec contact" id="contato">
         <div className="content">
           <div className="mxw800p">
-            <h3>Entre em contato </h3>
+            <h3 className="center">Entre em contato </h3>
             <p>
               Se preferir entre em contato prenchendo o formulário abaixo ou
               através das redes socias abaixo.
