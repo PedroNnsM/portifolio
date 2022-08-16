@@ -28,7 +28,7 @@ export function App() {
   const [show, setShow] = useState(true);
 
   const settings = {
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 50,
     navigation: true,
     pagination: {
@@ -552,7 +552,7 @@ export function App() {
       <section className="sec contact" id="contato">
         <div className="content">
           <div className="mxw800p">
-            <h3 className="center">Entre em contato </h3>
+            <h3 className="">Entre em contato </h3>
             <p>
               Se preferir entre em contato prenchendo o formulário abaixo ou
               através das redes socias abaixo.
