@@ -15,7 +15,7 @@ import menuSocial from './assets/menuRedSocial.svg';
 import barbearia from './assets/barbearia.svg';
 import foto   from './assets/foto.png';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Slider } from './components/carousel/Slider';
 import { SwiperSlide } from 'swiper/react';
 import './components/carousel/Slider.css';
@@ -26,6 +26,15 @@ import {BsGithub} from 'react-icons/bs';
 
 export function App() {
   const [show, setShow] = useState(true);
+  const [repositories, setRepositories] = useState([]);
+  
+  useEffect(() =>{
+    fetch('https://api.github.com/users/PedroNnsM/repos')
+    .then(response => response.json())
+    .then(data => setRepositories(data))
+  }, [])
+
+  const repositorioFiltrado = repositories.filter(repository => homepage !== 'null' )
 
   const settings = {
     slidesPerView: 3,
@@ -273,278 +282,45 @@ export function App() {
             <p>Aqui são alguns dos meus projetos recentes.</p>
           </div>
           <div className="workBx">
-            <div className="brand">
-              <a
-                href="https://pedronunes-jogo-da-memoria.vercel.app/"
-                target="_blanck"
-              >
-                <img src={memoria} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Jogo da Memória</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr"
-                target="_blanck"
-              >
-                <img src={tabela} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Tabela de classificacão</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/XWZOGbN"
-                target="_blanck"
-              >
-                <img src={relogio} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Relógio digital</h2>
-              </a>
-            </div>
-
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/ExExNVZ"
-                target="_blanck"
-              >
-                <img src={imc} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Calculadora de IMC</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/KKQbxQB"
-                target="_blanck"
-              >
-                <img src={menu} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Menu</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a href="https://menu-social.vercel.app/" target="_blanck">
-                <img src={menuSocial} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                </span>
-                <h2>Menu Social</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://github.com/PedroNnsM/barbeariaALura"
-                target="_blanck"
-              >
-                <img src={barbearia} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                </span>
-                <h2>Barbearia Alura</h2>
-              </a>
-            </div>
-
+          { repositories.map(repository =>{
+            return (
+              <div className="brand">
+                <a
+                  href={repository.html_url}
+                >
+                  <img src={memoria} />
+                    <span>
+                      <p>{repository.description}</p>
+                      Tecnologias nesse projeto:
+                      {repository.language}
+                    </span>
+                    <h2>{repository.name}</h2>
+                  </a>
+              </div>
+             )})}
             <Slider settings={settings}>
+            { repositorioFiltrado
+            .map(repository => {
+            return (
               <SwiperSlide className='teste'>
                 <img src={memoria} />
                 <span>
                   <p>
-                    Um jogo da memoria criado com fotos de aves para trazer uma bricadeira para meu filho 
+                    {repository.description}
                   </p>
                   <a
-                    href="https://pedronunes-jogo-da-memoria.vercel.app/"
+                    href={repository.homepage}
                     target="_blanck"
                   >
                     <button>Demo</button>
                   </a>
-                  <a href="">
+                  <a href={repository.html_url}target="_blanck">
                     <BsGithub /> Github
                   </a>
                 </span>
-                <h2>Jogo da Memória</h2>
+                <h2>{repository.name}</h2>
               </SwiperSlide>
-
-              <SwiperSlide>
-                
-                  <img src={tabela} />
-                  <span>
-                  <p>
-                    Um Exemplo de texto
-                  </p>
-                  <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr"
-                  target="_blanck"
-                >
-                    <button>Demo</button>
-                  </a>
-                  <a href="">
-                    <BsGithub /> Github
-                  </a>
-                </span>
-                  <h2>Tabela de classificacão</h2>
-             
-              </SwiperSlide>
-
-              <SwiperSlide>
-                  <img src={relogio} />
-                  <span>
-                  <p>
-                    Um Exemplo de texto
-                  </p>
-                  <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/XWZOGbN"
-                  target="_blanck"
-                >
-                    <button>Demo</button>
-                  </a>
-                  <a href="">
-                    <BsGithub /> Github
-                  </a>
-                  </span>
-                  <h2>Relógio digital</h2>
-
-              </SwiperSlide>
-
-              <SwiperSlide>
-               
-                  <img src={imc} />
-                  <span>
-                  <p>
-                    Um Exemplo de texto
-                  </p>
-                  <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/ExExNVZ"
-                  target="_blanck"
-                >
-                    <button>Demo</button>
-                  </a>
-                  <a href="">
-                    <BsGithub /> Github
-                  </a>
-                  </span>
-                  <h2>Calculadora de IMC</h2>
-                
-              </SwiperSlide>
-
-              <SwiperSlide>
-               
-                  <img src={menu} />
-                  <span>
-                  <p>
-                    Um Exemplo de texto
-                  </p>
-                  <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/KKQbxQB"
-                  target="_blanck"
-                >
-                    <button>Demo</button>
-                  </a>
-                  <a href="">
-                    <BsGithub /> Github
-                  </a>
-                  </span>
-                  <h2>Menu</h2>
-                
-              </SwiperSlide>
-
-              <SwiperSlide>
-                
-                  <img src={menuSocial} />
-                  <span>
-                  <p>
-                    Um Exemplo de texto
-                  </p>
-                  <a
-                  href="https://menu-social.vercel.app/"
-                  target="_blanck"
-                >
-                    <button>Demo</button>
-                  </a>
-                  <a href="">
-                    <BsGithub /> Github
-                  </a>
-                  </span>
-                  <h2>Menu Social</h2>
-                
-              </SwiperSlide>
-
-              <SwiperSlide>
-                
-                  <img src={barbearia} />
-                  <span>
-                  <p>
-                    Um Exemplo de texto
-                  </p>
-                  <a
-                  href="https://github.com/PedroNnsM/barbeariaALura"
-                  target="_blanck"
-                >
-                    <button>Demo</button>
-                  </a>
-                  <a href="">
-                    <BsGithub /> Github
-                  </a>
-                  </span>
-                  <h2>Barbearia Alura</h2>
-                
-              </SwiperSlide>
+              )})}
             </Slider>
           </div>
         </div>
