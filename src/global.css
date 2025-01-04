@@ -11,6 +11,7 @@
     weight: 400;
     color:#0D0D0D;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -151,6 +152,10 @@ header.sticky ul li a
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
+}
+
+.center{
+    text-align: center;
 }
 h3 {
     font-size: 40px;

@@ -15,19 +15,29 @@ import menuSocial from './assets/menuRedSocial.svg';
 import barbearia from './assets/barbearia.svg';
 import foto   from './assets/foto.png';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Slider } from './components/carousel/Slider';
 import { SwiperSlide } from 'swiper/react';
 import './components/carousel/Slider.css';
+import {BsGithub} from 'react-icons/bs';
 
 
 
 
 export function App() {
   const [show, setShow] = useState(true);
+  const [repositories, setRepositories] = useState([]);
+  
+  useEffect(() =>{
+    fetch('https://api.github.com/users/PedroNnsM/repos')
+    .then(response => response.json())
+    .then(data => setRepositories(data))
+  }, [])
 
+  const repositoriesFilter = repositories.filter( repository => repository.homepage === null );
+  
   const settings = {
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 50,
     navigation: true,
     pagination: {
@@ -82,7 +92,8 @@ export function App() {
 
       <section className="banner" id="home">
         <h2>Olá, me chamo</h2>
-        <h3>Pedro Nunes</h3> <br />
+        <h3>Pedro Nunes</h3>
+        <br />
         <p>
           Sou Desenvolvedor <span> Front-end</span>
         </p>
@@ -164,7 +175,7 @@ export function App() {
 
       <section className="sec" id="tecnologias">
         <div className="content">
-          <div className="mxw800p">
+          <div className="mxw800p center">
             <h3>Tecnologias que utilizo</h3>
             <p>Projetos realizados com as seguintes tecnologias:</p>
           </div>
@@ -223,7 +234,7 @@ export function App() {
 
       <section className="sec stats" id="">
         <div className="content">
-          <div className="mxw800p">
+          <div className="mxw800p center">
             <h3>Meus certificados</h3>
             <p>Certificados de formações front-end</p>
           </div>
@@ -266,272 +277,50 @@ export function App() {
       </section>
       <section className="sec work" id="portifolio">
         <div className="content">
-          <div className="mxw800p">
+          <div className="mxw800p center">
             <h3>Projetos recentes</h3>
             <p>Aqui são alguns dos meus projetos recentes.</p>
           </div>
           <div className="workBx">
-            <div className="brand">
-              <a
-                href="https://pedronunes-jogo-da-memoria.vercel.app/"
-                target="_blanck"
-              >
-                <img src={memoria} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Jogo da Memória</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr"
-                target="_blanck"
-              >
-                <img src={tabela} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Tabela de classificacão</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/XWZOGbN"
-                target="_blanck"
-              >
-                <img src={relogio} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Relógio digital</h2>
-              </a>
-            </div>
-
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/ExExNVZ"
-                target="_blanck"
-              >
-                <img src={imc} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Calculadora de IMC</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://codepen.io/pedro-nunes-the-lessful/pen/KKQbxQB"
-                target="_blanck"
-              >
-                <img src={menu} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                  JavaScript
-                  <br />
-                </span>
-                <h2>Menu</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a href="https://menu-social.vercel.app/" target="_blanck">
-                <img src={menuSocial} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                </span>
-                <h2>Menu Social</h2>
-              </a>
-            </div>
-            <div className="brand">
-              <a
-                href="https://github.com/PedroNnsM/barbeariaALura"
-                target="_blanck"
-              >
-                <img src={barbearia} />
-                <span>
-                  Tecnologias nesse projeto:
-                  <br />
-                  Html
-                  <br />
-                  Css
-                  <br />
-                </span>
-                <h2>Barbearia Alura</h2>
-              </a>
-            </div>
-
-            <Slider settings={settings}>
-              <SwiperSlide>
+          { repositories.map(repository =>{
+            return (
+              <div className="brand">
                 <a
-                  href="https://pedronunes-jogo-da-memoria.vercel.app/"
-                  target="_blanck"
+                  href={repository.html_url}
                 >
                   <img src={memoria} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
-                  </span>
-                  <h2>Jogo da Memória</h2>
-                </a>
+                    <span>
+                      <p>{repository.description}</p>
+                      Tecnologias nesse projeto:
+                      {repository.language}
+                    </span>
+                    <h2>{repository.name}</h2>
+                  </a>
+              </div>
+             )})}
+            <Slider settings={settings}>
+            { repositories
+            .map(repository => {
+            return (
+              <SwiperSlide className='teste'>
+                
+                <span>
+                  <p>
+                    {repository.description}
+                  </p>
+                  <a
+                    href={repository.homepage}
+                    target="_blanck"
+                  >
+                    <button>Demo</button>
+                  </a>
+                  <a href={repository.html_url}target="_blanck">
+                    <BsGithub /> Github
+                  </a>
+                </span>
+                <h2>{repository.name}</h2>
               </SwiperSlide>
-
-              <SwiperSlide>
-                <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/xxgEyJr"
-                  target="_blanck"
-                >
-                  <img src={tabela} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
-                  </span>
-                  <h2>Tabela de classificacão</h2>
-                </a>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/XWZOGbN"
-                  target="_blanck"
-                >
-                  <img src={relogio} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
-                  </span>
-                  <h2>Relógio digital</h2>
-                </a>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/ExExNVZ"
-                  target="_blanck"
-                >
-                  <img src={imc} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
-                  </span>
-                  <h2>Calculadora de IMC</h2>
-                </a>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <a
-                  href="https://codepen.io/pedro-nunes-the-lessful/pen/KKQbxQB"
-                  target="_blanck"
-                >
-                  <img src={menu} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                    JavaScript
-                    <br />
-                  </span>
-                  <h2>Menu</h2>
-                </a>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <a href="https://menu-social.vercel.app/" target="_blanck">
-                  <img src={menuSocial} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                  </span>
-                  <h2>Menu Social</h2>
-                </a>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <a
-                  href="https://github.com/PedroNnsM/barbeariaALura"
-                  target="_blanck"
-                >
-                  <img src={barbearia} />
-                  <span>
-                    Tecnologias nesse projeto:
-                    <br />
-                    Html
-                    <br />
-                    Css
-                    <br />
-                  </span>
-                  <h2>Barbearia Alura</h2>
-                </a>
-              </SwiperSlide>
+              )})}
             </Slider>
           </div>
         </div>
@@ -539,7 +328,7 @@ export function App() {
       <section className="sec contact" id="contato">
         <div className="content">
           <div className="mxw800p">
-            <h3>Entre em contato </h3>
+            <h3 className="">Entre em contato </h3>
             <p>
               Se preferir entre em contato prenchendo o formulário abaixo ou
               através das redes socias abaixo.
