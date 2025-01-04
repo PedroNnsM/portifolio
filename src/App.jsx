@@ -34,8 +34,8 @@ export function App() {
     .then(data => setRepositories(data))
   }, [])
 
-  const repositorioFiltrado = repositories.filter(repository => homepage !== 'null' )
-
+  const repositoriesFilter = repositories.filter( repository => repository.homepage === null );
+  
   const settings = {
     slidesPerView: 3,
     spaceBetween: 50,
@@ -299,11 +299,11 @@ export function App() {
               </div>
              )})}
             <Slider settings={settings}>
-            { repositorioFiltrado
+            { repositories
             .map(repository => {
             return (
               <SwiperSlide className='teste'>
-                <img src={memoria} />
+                
                 <span>
                   <p>
                     {repository.description}
