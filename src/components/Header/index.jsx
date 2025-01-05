@@ -1,42 +1,32 @@
-export function Header(){
+export function Header() {
+  const menuItems = [
+    { href: "#home", label: "Início" },
+    { href: "#sobre", label: "Sobre" },
+    { href: "#tecnologias", label: "Tecnologias" },
+    { href: "#portifolio", label: "Portifolio" },
+    { href: "#contato", label: "Contato" },
+  ];
+
   function Toggle() {
-    var header = document.querySelector('header');
+    const header = document.querySelector('header');
     header.classList.toggle("active");
-   } 
-  return(
-    
+  }
+
+  return (
     <header id="header">
-    <a href="#" className="logo">
-      Pedro.dev
-    </a>
-    <ul>
-      <li>
-        <a href="#home" onClick={Toggle}>
-          Início
-        </a>
-      </li>
-      <li>
-        <a href="#sobre" onClick={Toggle}>
-          Sobre
-        </a>
-      </li>
-      <li>
-        <a href="#tecnologias" onClick={Toggle}>
-          Tecnologias
-        </a>
-      </li>
-      <li>
-        <a href="#portifolio" onClick={Toggle}>
-          Portifolio
-        </a>
-      </li>
-      <li>
-        <a href="#contato" onClick={Toggle}>
-          Contato
-        </a>
-      </li>
-    </ul>
-    <div className="toggle" onClick={Toggle}></div>
-  </header>
-  )
-} 
+      <a href="#" className="logo">
+        Pedro.dev
+      </a>
+      <ul>
+        {menuItems.map((item, index) => (
+          <li key={index}>
+            <a href={item.href} onClick={Toggle}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div className="toggle" onClick={Toggle}></div>
+    </header>
+  );
+}
