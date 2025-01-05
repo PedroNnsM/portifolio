@@ -20,6 +20,7 @@ import { Slider } from './components/carousel/Slider';
 import { SwiperSlide } from 'swiper/react';
 import './components/carousel/Slider.css';
 import {BsGithub} from 'react-icons/bs';
+import { Header } from './components/Header';
 
 
 
@@ -49,46 +50,11 @@ export function App() {
     header.classList.toggle("sticky", window.scrollY > 0);
     });
   
-   function Toggle() {
-    var header = document.querySelector('header');
-    header.classList.toggle("active");
-   } 
+   
 
   return (
     <>
-      <header id="header">
-        <a href="#" className="logo">
-          Pedro.dev
-        </a>
-        <ul>
-          <li>
-            <a href="#home" onClick={Toggle}>
-              Início
-            </a>
-          </li>
-          <li>
-            <a href="#sobre" onClick={Toggle}>
-              Sobre
-            </a>
-          </li>
-          <li>
-            <a href="#tecnologias" onClick={Toggle}>
-              Tecnologias
-            </a>
-          </li>
-          <li>
-            <a href="#portifolio" onClick={Toggle}>
-              Portifolio
-            </a>
-          </li>
-          <li>
-            <a href="#contato" onClick={Toggle}>
-              Contato
-            </a>
-          </li>
-        </ul>
-        <div className="toggle" onClick={Toggle}></div>
-      </header>
+      <Header />
 
       <section className="banner" id="home">
         <h2>Olá, me chamo</h2>
