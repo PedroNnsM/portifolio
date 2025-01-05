@@ -1,3 +1,5 @@
+import React from "react";
+
 export function Header() {
   const menuItems = [
     { href: "#home", label: "Início" },
@@ -8,8 +10,10 @@ export function Header() {
   ];
 
   function Toggle() {
-    const header = document.querySelector('header');
-    header.classList.toggle("active");
+    const header = document.querySelector("header");
+    if (header) {
+      header.classList.toggle("active");
+    }
   }
 
   return (
