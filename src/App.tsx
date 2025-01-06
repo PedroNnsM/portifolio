@@ -3,11 +3,13 @@ import { Slider } from "./components/carousel/Slider";
 import { SwiperSlide } from "swiper/react";
 import { BsGithub } from 'react-icons/bs';
 import { Header } from "./components/Header";
+import { SobreMim } from "./components/SobreMim";
 import "./components/carousel/Slider.css";
 
 import memoria from "./assets/memoria.svg";
+import { Banner } from "./components/Banner";
 
-import foto from "./assets/foto.png";
+
 
 type Repository = {
   id: number;
@@ -63,55 +65,7 @@ export function App() {
 
      <Banner />
 
-      <section className="sec" id="sobre">
-        <div className="content">
-          <div className="mxw800p">
-            <h3>Sobre mim</h3>
-            {show ? (
-              <>
-                <p>
-                  Sou desenvolvedor Front-end, estudo e atuo em projetos
-                  pessoais desde 2021.
-                  <br />
-                  Me interessei por desenvolver sites e aplicativos para a web,
-                  e por isso voltei meus estudos para Front-end.
-                  <br />
-                  Atualmente estou cursando Análise e Desenvolvimento de
-                  Sistemas na Estácio de Sá, e também estou cursando o curso de
-                  Desenvolvimento Web na{" "}
-                  <a
-                    href="https://www.alura.com.br/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Alura
-                  </a>
-                </p>
-                <button className="btn" onClick={() => setShow(!show)}>
-                  Ver mais
-                </button>
-              </>
-            ) : (
-              <div className="saibaMais">
-                <div className="saibaContent">
-                  <div className="saibaContent-text">
-                    <img src={foto} alt="Minha foto" />
-                    <p>
-                      Sou natural de Porto Alegre RS, mas moro em Florianópolis
-                      SC.
-                      <br />
-                      Sempre amei tecnologia e jogos eletrônicos...
-                    </p>
-                  </div>
-                </div>
-                <button className="btn bt2" onClick={() => setShow(!show)}>
-                  Ver menos
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+     <SobreMim show={show} setShow={setShow} />
 
       <section className="sec" id="tecnologias">
         {/* ... seção de tecnologias */}
@@ -165,6 +119,6 @@ export function App() {
         </div>
       </section>
      
-    </Banner>
+    </>
   );
 }
