@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Slider } from './components/carousel/Slider';
-import { SwiperSlide } from 'swiper/react';
+import React, { useState, useEffect } from "react";
+import { Slider } from "./components/carousel/Slider";
+import { SwiperSlide } from "swiper/react";
 import { BsGithub } from 'react-icons/bs';
-import { Header } from './components/Header';
-import './components/carousel/Slider.css';
+import { Header } from "./components/Header";
+import "./components/carousel/Slider.css";
 
-import react from './assets/react.png';
-import html from './assets/html.png';
-import css from './assets/css.png';
-import js from './assets/js.png';
-import github from './assets/github.png';
-import linkedin from './assets/linkedin.png';
-import codepen from './assets/codepen.png';
-import memoria from './assets/memoria.svg';
-import tabela from './assets/tabela.svg';
-import relogio from './assets/relogio.svg';
-import imc from './assets/imc.svg';
-import menu from './assets/menu.svg';
-import menuSocial from './assets/menuRedSocial.svg';
-import barbearia from './assets/barbearia.svg';
-import foto from '../assets/foto.png';
+import memoria from "./assets/memoria.svg";
+
+import foto from "./assets/foto.png";
 
 type Repository = {
   id: number;
@@ -44,7 +32,7 @@ export function App() {
   const [repositories, setRepositories] = useState<Repository[]>([]);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/PedroNnsM/repos')
+    fetch("https://api.github.com/users/PedroNnsM/repos")
       .then((response) => response.json())
       .then((data: Repository[]) => setRepositories(data));
   }, []);
@@ -62,10 +50,10 @@ export function App() {
     },
   };
 
-  window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
     if (header) {
-      header.classList.toggle('sticky', window.scrollY > 0);
+      header.classList.toggle("sticky", window.scrollY > 0);
     }
   });
 
@@ -96,7 +84,7 @@ export function App() {
                   <br />
                   Atualmente estou cursando Análise e Desenvolvimento de
                   Sistemas na Estácio de Sá, e também estou cursando o curso de
-                  Desenvolvimento Web na{' '}
+                  Desenvolvimento Web na{" "}
                   <a
                     href="https://www.alura.com.br/"
                     target="_blank"
@@ -141,7 +129,11 @@ export function App() {
           <div className="workBx">
             {repositories.map((repository) => (
               <div className="brand" key={repository.id}>
-                <a href={repository.html_url} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={repository.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={memoria} alt="Projeto" />
                   <span>
                     <p>{repository.description}</p>
@@ -157,10 +149,18 @@ export function App() {
               <SwiperSlide className="teste" key={repository.id}>
                 <span>
                   <p>{repository.description}</p>
-                  <a href={repository.homepage ?? undefined} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={repository.homepage ?? undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <button>Demo</button>
                   </a>
-                  <a href={repository.html_url} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={repository.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <BsGithub /> Github
                   </a>
                 </span>
