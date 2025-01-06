@@ -1,5 +1,5 @@
 import React from "react";
-import foto from "./assets/foto.png";
+import foto from "../../assets/foto.png"
 
 type SobreMimProps = {
   show: boolean;

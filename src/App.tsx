@@ -8,6 +8,7 @@ import "./components/carousel/Slider.css";
 
 import memoria from "./assets/memoria.svg";
 import { Banner } from "./components/Banner";
+import { Tecnologias } from "./components/Tecnologias/Index";
 
 
 
@@ -67,9 +68,7 @@ export function App() {
 
      <SobreMim show={show} setShow={setShow} />
 
-      <section className="sec" id="tecnologias">
-        {/* ... seção de tecnologias */}
-      </section>
+      <Tecnologias />
 
       <section className="sec work" id="portifolio">
         <div className="content">
