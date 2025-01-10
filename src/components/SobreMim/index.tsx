@@ -9,8 +9,8 @@ type SobreMimProps = {
 export function SobreMim({ show, setShow }: SobreMimProps) {
   return (
     <section className="sec" id="sobre">
-      <div className="content">
-        <div className="mxw800p">
+      <div className="realative text-center w-full">
+        <div className="max-w-3xl">
           <h3>Sobre mim</h3>
           {show ? (
             <div>
@@ -32,8 +32,8 @@ export function SobreMim({ show, setShow }: SobreMimProps) {
               </button>
             </div>
           ) : (
-            <div className="saibaMais">
-              <img src={foto} alt="Pedro Nunes" />
+            <div className="block  ">
+              <img src={foto} alt="Pedro Nunes" className="ml-1 relative float-right w-1/2 h-auto mb-5" />
               <p>
                 Sou natural de Porto Alegre RS, mas moro em Florianópolis SC.
                 Com o nascimento do meu filho comecei a procurar mudanças na
