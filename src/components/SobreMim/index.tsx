@@ -1,5 +1,5 @@
 import React from "react";
-import foto from "../../assets/foto.png"
+import foto from "../../assets/foto.png";
 
 type SobreMimProps = {
   show: boolean;
@@ -33,7 +33,11 @@ export function SobreMim({ show, setShow }: SobreMimProps) {
             </div>
           ) : (
             <div className="block  ">
-              <img src={foto} alt="Pedro Nunes" className="ml-1 relative float-right w-1/2 h-auto mb-5" />
+              <img
+                src={foto}
+                alt="Pedro Nunes"
+                className="ml-1 relative float-right w-1/2 h-auto mb-5"
+              />
               <p>
                 Sou natural de Porto Alegre RS, mas moro em Florianópolis SC.
                 Com o nascimento do meu filho comecei a procurar mudanças na

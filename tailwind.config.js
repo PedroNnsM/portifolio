@@ -8,7 +8,7 @@ module.exports = {
         "permanent-marker": ["'Permanent Marker', cursive"],
       },
       backgroundImage: {
-        'banner-bg': "url('./src/assets/bg.jpg')",
+        "banner-bg": "url('./src/assets/bg.jpg')",
       },
     },
   },
