@@ -39,7 +39,7 @@ export function Tecnologias() {
               </div>
               <div className="content">
                 <h2>{tech.name}</h2>
-                <p>{tech.description}</p>
+             
               </div>
             </div>
           ))}
