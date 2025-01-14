@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import { Header } from "./components/Header";
 import { SobreMim } from "./components/SobreMim";
-import "./components/carousel/Slider.css";
 
 import { Banner } from "./components/Banner";
 import { Tecnologias } from "./components/Tecnologias/Index";
 import { Portifolio } from "./components/Portifolio";
+import { Contact } from "./components/Contact";
 
 type Repository = {
   id: number;
@@ -43,6 +43,7 @@ export function App() {
       <SobreMim show={show} setShow={setShow} />
       <Tecnologias />
       <Portifolio />
+      <Contact />
     </>
   );
 }
